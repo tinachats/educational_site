@@ -1,0 +1,7 @@
+@import url('ripple-animation.css');
+
+.hero-section>.container {
+    background: url('../../images/app/map.svg');
+    width: 100%;
+    height: 80vh;
+}   

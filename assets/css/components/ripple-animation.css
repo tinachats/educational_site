@@ -1,0 +1,73 @@
+.ripples {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
+}
+
+.ripples>.outer-ripple,
+.ripples>.middle-ripple{
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+}
+
+.ripples>.outer-ripple {
+    width: 500px;
+    height: 500px;
+    background-color: #d2b8fe;
+    opacity: 0.2;
+}
+
+.ripples>.middle-ripple {
+    width: 360px;
+    height: 360px;
+    background-color: #9173c5;
+    opacity: 0.5;
+}
+
+.ripples>.inner-ripple {
+    position: relative;
+    height: 200px;
+    width: 200px;
+    background-color: #835fc0;
+    border-radius: 50%;
+    opacity: 1;
+}
+
+.ripples>.inner-ripple:before,
+.ripples>.inner-ripple:after {
+    position: absolute;
+    content: '';
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    border: 4px solid #835fc0;
+    border-radius: 50%;
+}
+
+.ripples>.inner-ripple:before {
+    animation: ripple 2s linear infinite;
+}
+
+.ripples>.inner-ripple:before {
+    animation: ripple 2s 1s linear infinite;
+}
+
+@keyframes ripple {
+    to {
+        transform: scale(3);
+        opacity: 0;
+    }
+}
+
+.ripples>.inner-ripple>.focal-point {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    place-self: center;
+}

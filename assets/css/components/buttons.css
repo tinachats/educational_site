@@ -1,4 +1,4 @@
-@import url('colors.css');
+@import url('../utilities/colors.css');
 
 :root {
     --btn-border-radius: 0.35rem;

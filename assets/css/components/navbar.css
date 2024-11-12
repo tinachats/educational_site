@@ -28,7 +28,6 @@
 .line .inner {
     width: 100%;
     height: inherit;
-    /* background: linear-gradient(40deg, #2096ff, #05ffa3, #e55039) !important; */
     background: linear-gradient(40deg,#ff965f, #ff928e, #d4adea, #2ebdff, #329fff, #cd85d7, #ff8e87, #ffad38);
     animation: slide 2s ease-in-out infinite;
 }
