@@ -1,0 +1,11 @@
+:root {
+    --app-color: #6743a5;
+    --app-dark-color: #41296a;
+    --black: #000;
+    --light: #f8f9fa;
+    --linear-gradient: linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);
+    --primary-color: var(--app-color);
+    --primary-dark-color: var(--app-dark-color);
+    --webkit-linear-gradient: -webkit-gradient(linear, left top, right top, from(#7F39F8), color-stop(51%, #543DE7), to(#7F39F8));
+    --white: #fff; 
+}

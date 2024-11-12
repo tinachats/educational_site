@@ -1,0 +1,41 @@
+@import url('colors.css');
+@import url('typography.css');
+@import url('buttons.css');
+@import url('navbar.css');
+@import url('hero-section.css');
+
+*, *::before, *::after {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+html,
+body {
+    position: relative;
+    overflow-x: hidden;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--light);
+    font-family: 'Poppins', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+.content-wrapper {
+    flex: 1 0 auto;
+    min-height: 100%
+}
+
+.navbar .btn {
+    font-size: var(--text-sm);
+}
+
+footer.footer {
+    flex-shrink: 0;
+}

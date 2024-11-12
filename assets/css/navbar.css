@@ -1,0 +1,69 @@
+
+.navbar {
+    font-size: var(--text-sm);
+}
+
+.navbar .navbar-brand{
+    object-fit: contain;
+}
+
+.app-logo {
+    font-family: 'Syne', sans-serif;
+    font-size: 1.75rem;
+    font-weight: 700;
+    margin-bottom: 0;
+}
+
+/* Color Gradient Preloader */
+
+.line {
+    height: 5px;
+    width: 100%;
+    background: #b8cdf9;
+    z-index: 11000;
+    position: absolute;
+    top: 0;
+}
+
+.line .inner {
+    width: 100%;
+    height: inherit;
+    /* background: linear-gradient(40deg, #2096ff, #05ffa3, #e55039) !important; */
+    background: linear-gradient(40deg,#ff965f, #ff928e, #d4adea, #2ebdff, #329fff, #cd85d7, #ff8e87, #ffad38);
+    animation: slide 2s ease-in-out infinite;
+}
+
+@keyframes slide {
+    0% {
+        transform-origin: left;
+        transform: scalex(0.3);
+    }
+    25% {
+        transform-origin: left;
+        transform: scalex(1);
+    }
+    26% {
+        transform-origin: right;
+        transform: scalex(1);
+    }
+    50% {
+        transform-origin: right;
+        transform: scalex(0.3);
+    }
+    75% {
+        transform-origin: right;
+        transform: scalex(1);
+    }
+    76% {
+        transform-origin: left;
+        transform: scalex(1);
+    }
+    100% {
+        transform-origin: left;
+        transform: scalex(0.3);
+    }
+}
+
+
+/* /.Color Gradient Preloader */
+
