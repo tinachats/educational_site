@@ -3,7 +3,23 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dr. TinaKing | Homepage</title>
+    <meta name="description" content="Dr. TinaKing's Learning Hub offers comprehensive courses in Robotics, Web Development, Product Design, Software Development, Math, Physics, Computer Science, Inventor, Arduino, Raspberry Pi, AI, Design & Technology, ICT, IT, Photoshop, and Matlab. Join us to master new skills and knowledge.">
+    <meta name="keywords" content="Dr. TinaKing, Robotics, Web Development, Product Design, Software Development, Math, Physics, Computer Science, Inventor, Arduino, Raspberry Pi, AI, Design & Technology, ICT, IT, Photoshop, Matlab">
+    <meta name="author" content="Dr. TinaKing">
+    <title>Dr. TinaKing's Learning Hub | Courses in Robotics, Web Development, and More</title>
+
+    <!-- Open Graph Meta Tags for social media sharing -->
+    <meta property="og:title" content="Dr. TinaKing's Learning Hub">
+    <meta property="og:description" content="Join Dr. TinaKing's Learning Hub for courses in Robotics, Web Development, Product Design, Software Development, Math, Physics, Computer Science, and more.">
+    <meta property="og:image" content="https://dr-tinaking.com/dr-tinaking-black-logo.png">
+    <meta property="og:url" content="https://dr-tinaking.com">
+    <meta property="og:type" content="website">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Dr. TinaKing's Learning Hub">
+    <meta name="twitter:description" content="Join Dr. TinaKing's Learning Hub for courses in Robotics, Web Development, Product Design, Software Development, Math, Physics, Computer Science, and more.">
+    <meta name="twitter:image" content="https://dr-tinaking.com/dr-tinaking-black-logo.png">
 
     <!-- Favicon -->
      <link rel="shortcut icon" href="assets/images/app/dr-tinaking-icon-logo.png" type="image/x-icon">
@@ -21,6 +37,35 @@
 
     <!-- Core CSS -->
      <link rel="stylesheet" href="assets/css/app.css">
+
+     <!-- Schema.org structured data -->
+    <script type="application/ld+json">
+        {
+          "@context": "https://schema.org",
+          "@type": "EducationalOrganization",
+          "name": "Dr. TinaKing's Learning Hub",
+          "url": "https://dr-tinaking.com",
+          "logo": "https://dr-tinaking.com/dr-tinaking-black-logo.png",
+          "description": "Dr. TinaKing's Learning Hub offers comprehensive courses in Robotics, 
+          Web Development, Product Design, Software Development, Math, Physics, Computer Science, 
+          Inventor, Arduino, Raspberry Pi, AI, Design & Technology, ICT, IT, 
+          Photoshop, and Matlab.",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "2 Thornpark Dr., Marlborough",
+            "addressLocality": "Harare",
+            "addressRegion": "Harare Province",
+            "postalCode": "+0002",
+            "addressCountry": "Zimbabwe"
+          },
+          "contactPoint": {
+            "@type": "ContactPoint",
+            "contactType": "Customer Support",
+            "cellphone": "+263 77 602 1140",
+            "email": "tinashe@dr-tinaking.com"
+          }
+        }
+    </script>
 </head>
 <body>
     <div class="content-wrapper">
@@ -80,16 +125,16 @@
                                     🚀 Empower Your Learning Journey Today
                                 </p>
                                 <h1 class="display-4 fw-bold">
-                                    Expert educators and tutors for learning <span class="text-gradient" id="course">robotics</span>.
+                                    Dr. TinaKing's Learning Hub for learning <span class="text-gradient" id="course">robotics</span>.
                                 </h1>
                                 <p>
-                                    Hands-on training, and certifications to help you get the most from Geeks Learning.
+                                    Hands-on training to help you get the geared up for Engineering, Graphics Designing or DevOps.
                                 </p>
                                 <ul class="list-group">
                                     <li class="list-inline-item mb-2">
                                         <span>
                                             <i class="bi-check-circle-fill text-success me-2"></i>
-                                            Expert Instructors
+                                            Expert Instructor
                                         </span>
                                     </li>
                                     <li class="list-inline-item mb-2">
@@ -108,13 +153,13 @@
         
                                 <!-- Call To Action Buttons -->
                                 <div class="d-flex align-items-md-center my-4">
-                                    <button class="btn btn-primary btn-lg">
-                                        Join for Free
-                                    </button>
+                                    <a role="button" href="/register.html" class="btn btn-primary btn-lg btn-icon">
+                                        <i class="bi-people fs-2 me-2"></i> Join for Free
+                                    </a>
         
-                                    <button class="btn btn-primary btn-lg ms-md-4">
-                                        Explore Courses
-                                    </button>
+                                    <a role="button" href="/courses" class="btn btn-primary btn-lg btn-icon ms-md-4">
+                                        Explore Courses <i class="bi-arrow-right animated-icon fs-2 ms-2"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
@@ -123,22 +168,34 @@
                         <!-- Searching for Students -->
                         <div class="col d-flex justify-content-center" id="student-searching">
                             <!-- Student Search Result -->
-                            <div class="d-block student-search-result shadow-lg rounded-3" id="first-student">
-                                <div class="d-flex align-items-start">
-                                    <div class="d-block text-center">
-                                        <img src="assets/images/users/avril.jpg" alt="Avril" class="rounded-circle me-2" height="40" width="40">
-                                    </div>
-                                    <div class="d-block text-start student-info">
-                                        <div class="title-placeholder"></div>
-                                        <div class="content-placeholder"></div>
-                                    </div>
+                            <div class="d-block student-search-result shadow-lg rounded-3 bg-blur border-light" id="first-student">
+                                <div class="avatar-group mb-2">
+                                    <span class="avatar avatar-md">
+                                      <!-- avatar  -->
+                                      <img alt="avatar" src="assets/images/users/avatar-1.jpg" class="rounded-circle">
+                                    </span>
+                                    <!-- avatar  -->
+                                    <span class="avatar avatar-md">
+                                      <img alt="avatar" src="assets/images/users/avatar-2.jpg" class="rounded-circle">
+                                    </span>
+                                    <!-- avatar  -->
+                                    <span class="avatar avatar-md">
+                                      <img alt="avatar" src="assets/images/users/avatar-3.jpg" class="rounded-circle">
+                                    </span>
+                                    <!-- avatar  -->
+                                    <span class="avatar avatar-md">
+                                      <img alt="avatar" src="assets/images/users/avatar-4.jpg" class="rounded-circle">
+                                    </span>
                                 </div>
-                                <h6 class="text-sm fw-bold mt-1 mb-0">CAD</h6>
+                                <div class="d-flex align-items-center">
+                                    <div class="text-dark fw-bold me-2">74+</div>
+                                    <small class="text-gray-500 text-sm">Engaged Students</small>
+                                </div>
                             </div>
                             <!-- /.Student Search Result -->
 
                             <!-- Student Search Result -->
-                            <div class="d-block student-search-result shadow-lg rounded-3" id="second-student">
+                            <div class="d-block student-search-result shadow-lg rounded-3 bg-blur border-light" id="second-student">
                                 <div class="d-flex align-items-start">
                                     <div class="d-block text-center">
                                         <img src="assets/images/users/craig.jpg" alt="Avril" class="rounded-circle me-2" height="40" width="40">
@@ -148,12 +205,12 @@
                                         <div class="content-placeholder"></div>
                                     </div>
                                 </div>
-                                <h6 class="text-sm fw-bold mt-1 mb-0">Maths</h6>
+                                <h6 class="text-dark text-sm fw-bold mt-1 mb-0">Maths</h6>
                             </div>
                             <!-- /.Student Search Result -->
 
                             <!-- Student Search Result -->
-                            <div class="d-block student-search-result shadow-lg rounded-3" id="third-student">
+                            <div class="d-block student-search-result shadow-lg rounded-3 bg-blur border-lights" id="third-student">
                                 <div class="d-flex align-items-start">
                                     <div class="d-block text-center">
                                         <img src="assets/images/users/tatiana.jpg" alt="Avril" class="rounded-circle me-2" height="40" width="40">
@@ -163,7 +220,7 @@
                                         <div class="content-placeholder"></div>
                                     </div>
                                 </div>
-                                <h6 class="text-sm fw-bold mt-1 mb-0">Web Development</h6>
+                                <h6 class="text-dark text-sm fw-bold mt-1 mb-0">Web Development</h6>
                             </div>
                             <!-- /.Student Search Result -->
 

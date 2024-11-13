@@ -1,9 +1,10 @@
-// Changing the course list every second on the hero page
+// Changing the course list every 1 and half second on the hero page
 const courseList = [
     'robotics', 'CAD', 'Math', 'Physics', 
     'Design', 'Python', 'PHP', 'Arduino', 
     'C++', 'JavaScript', 'SQL', 'Inventor',  
-    'Science', 'Photoshop', 'ICT', 'AI'
+    'Science', 'Photoshop', 'ICT', 'AI', 'IT', 
+    'Matlab', 'TinkerCAD', 'Proteus', 'GIT', 'MS Excel'
 ];
 const courseElement = document.getElementById('course');
 

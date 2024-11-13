@@ -12,7 +12,7 @@
     --btn-font-size: 0.875rem;
     --btn-lg-font-size: 1.1725rem;
     --btn-font-weight: 500;
-    --btn-lg-font-weight: 600;
+    --btn-lg-font-weight: 700;
     --btn-line-height: 1.6;
 }
 
@@ -55,6 +55,22 @@
 .btn-lg {
     padding: var(--btn-lg-p-y) var(--btn-lg-p-x);
     font-size: var(--btn-lg-font-size);
-    font-weight: var(--btn-lg-font-size);
+    font-weight: var(--btn-lg-font-weight);
     border-radius: var(--btn-lg-border-radius);
+}
+
+.btn-icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.btn-icon>i.animated-icon { 
+    display: inline-block; 
+    transition: transform 0.3s ease; 
+    margin-left: 10px; 
+} 
+
+.btn-icon:hover>i.animated-icon { 
+    transform: translateX(10px);
 }

@@ -12,7 +12,9 @@
 
 .hero-section #student-searching>.student-search-result {
     position: absolute;
-    background-color: var(--white);
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    --webkit-backdrop-filter: blur(5px);
     padding: 0.75rem;
     width: 200px;
     z-index: 10;
@@ -63,4 +65,35 @@
     margin-top: .5rem;
     opacity: .3;
     width: 60px;
+}
+
+.avatar-group {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.avatar-group img {
+    border: 3px solid var(--white);
+}
+.avatar img {
+    height: 100%;
+    -o-object-fit: cover;
+    object-fit: cover;
+    width: 100%;
+}
+
+.avatar-group .avatar:hover {
+    z-index: 2;
+}
+.avatar-md {
+    height: 2.5rem;
+    width: 2.5rem;
+}
+.avatar {
+    display: inline-block;
+    position: relative;
+    height: 3rem;
+    width: 3rem;
+    margin-left: -1.5rem;
 }
