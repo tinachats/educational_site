@@ -76,9 +76,9 @@
         <!-- /.Progress Indicator -->
 
         <!-- Page Header -->
-        <header class="header">
+        <header class="header" id="header-section">
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg bg-body-tertiary">
+            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm border-bottom">
                 <div class="container">
                     <a class="navbar-brand app-logo" href="/">
                         <img src="assets/images/app/dr-tinaking-icon-logo.png" alt="Dr. TinaKing logo" width="33" height="30">
@@ -113,7 +113,6 @@
             </nav>
             <!-- /.Navbar -->
                 
-
             <!-- Hero Section -->
             <section class="hero-section">
                 <div class="container">
@@ -152,12 +151,12 @@
                                 </ul>
         
                                 <!-- Call To Action Buttons -->
-                                <div class="d-flex align-items-md-center my-4">
-                                    <a role="button" href="/register.html" class="btn btn-primary btn-lg btn-icon">
+                                <div class="d-block d-md-flex align-items-md-center my-4">
+                                    <a role="button" href="/register.html" class="btn btn-primary btn-lg btn-icon mb-3 mb-md-0">
                                         <i class="bi-people fs-2 me-2"></i> Join for Free
                                     </a>
         
-                                    <a role="button" href="/courses" class="btn btn-primary btn-lg btn-icon ms-md-4">
+                                    <a role="button" href="/courses" class="btn btn-outline-primary btn-lg btn-icon ms-md-4">
                                         Explore Courses <i class="bi-arrow-right animated-icon fs-2 ms-2"></i>
                                     </a>
                                 </div>
@@ -189,7 +188,19 @@
                                 </div>
                                 <div class="d-flex align-items-center">
                                     <div class="text-dark fw-bold me-2">74+</div>
-                                    <small class="text-gray-500 text-sm">Engaged Students</small>
+                                    <div class="d-block text-start">
+                                        <div class="d-flex align-items-center">
+                                            <small class="me-2 fw-bold">4.8</small>
+                                            <span class="d-flex align-items-center">
+                                                <i class="bi-star-fill text-warning text-sm me-1"></i>
+                                                <i class="bi-star-fill text-warning text-sm me-1"></i>
+                                                <i class="bi-star-fill text-warning text-sm me-1"></i>
+                                                <i class="bi-star-fill text-warning text-sm me-1"></i>
+                                                <i class="bi-star-fill text-warning text-sm me-1"></i>
+                                            </span>
+                                        </div>
+                                        <small class="text-gray-500 text-sm">Engaged Students</small>
+                                    </div>
                                 </div>
                             </div>
                             <!-- /.Student Search Result -->
@@ -241,6 +252,60 @@
             <!-- /.Hero Section -->
         </header>
         <!-- /. Page Header -->
+
+        <!-- Content Aggregates -->
+        <div class="card card-body container shadow-sm rounded-3 border content-aggregate-body">
+            <div class="row justify-content-center align-items-center">
+                <!-- Content Aggregate -->
+                <div class="col-6 col-md-3 content-aggregate">
+                    <div class="d-block text-center">
+                        <i class="bi-award fs-2 text-info"></i>
+                        <h5 class="animated-number fw-bold display-6">316,000</h5>
+                        <p class="text-sm text-muted text-capitalize">
+                            Qualified Instructor
+                        </p>
+                    </div>
+                </div>
+                <!-- /.Content Aggregate -->
+
+                <!-- Content Aggregate -->
+                <div class="col-6 col-md-3 content-aggregate">
+                    <div class="d-block text-center">
+                        <i class="bi-people fs-2 text-warning"></i>
+                        <h5 class="animated-number fw-bold display-6">126</h5>
+                        <p class="text-sm text-muted text-capitalize">
+                            Course Enrollments
+                        </p>
+                    </div>
+                </div>
+                <!-- /.Content Aggregate -->
+
+                <!-- Content Aggregate -->
+                <div class="col-6 col-md-3 content-aggregate">
+                    <div class="d-block text-center">
+                        <i class="bi-tv fs-2 text-purple"></i>
+                        <h5 class="animated-number fw-bold display-6">49</h5>
+                        <p class="text-sm text-muted text-capitalize">
+                            Courses in 5 Languages
+                        </p>
+                    </div>
+                </div>
+                <!-- /.Content Aggregate -->
+
+                <!-- Content Aggregate -->
+                <div class="col-6 col-md-3 content-aggregate">
+                    <div class="d-block text-center">
+                        <i class="bi-film fs-2 text-success"></i>
+                        <h5 class="animated-number fw-bold display-6">357</h5>
+                        <p class="text-sm text-muted text-capitalize">
+                            Online Videos
+                        </p>
+                    </div>
+                </div>
+                <!-- /.Content Aggregate -->
+            </div>
+        </div>
+        <!-- /.Content Aggregates -->
     </div>
 
     <!-- Footer -->

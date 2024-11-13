@@ -12,3 +12,7 @@
     -webkit-text-fill-color: transparent;
     
 }
+
+.text-purple {
+    color: var(--purple);
+}
