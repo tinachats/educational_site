@@ -1,3 +1,14 @@
+@import url('colors.css');
+
 :root {
     --text-sm: 0.875rem;
+}
+
+.text-gradient {
+    background: var(--text-linear-gradient);
+    background-size: 300% 100%;
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    
 }
