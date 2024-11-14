@@ -1,3 +1,4 @@
+@import url('../utilities/colors.css');
 
 .navbar {
     font-size: var(--text-sm);
@@ -19,7 +20,7 @@
 .line {
     height: 5px;
     width: 100%;
-    background: #b8cdf9;
+    background: #8599c4;
     z-index: 11000;
     position: absolute;
     top: 0;
@@ -63,6 +64,40 @@
     }
 }
 
-
 /* /.Color Gradient Preloader */
+
+/* Navs */
+
+
+.nav-tabs {
+    background-color: none;
+    justify-content: space-between;
+    border-bottom: 2px solid var(--border-color);
+}
+
+.nav-tabs .nav-item .nav-link {
+    border: none;
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
+    font-weight: 500;
+    color: var(--text-muted);
+}
+
+.nav-tabs .nav-item .nav-link.active {
+    background-color: transparent;
+    border-bottom: 5px solid var(--purple);
+    border-radius: 10px 10px 0 0; /* Rounded top edges */ 
+    color: var(--purple); 
+}
+
+.nav-tabs.clear {
+    justify-content: start;
+    border-bottom: 1px solid transparent;
+    border-radius: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+}
+
+
+/* /.Navs */
 

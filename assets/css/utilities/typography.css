@@ -4,6 +4,30 @@
     --text-sm: 0.875rem;
 }
 
+a {
+    color: var(--purple);
+    text-decoration: none;
+}
+
+.fs-6 {
+    font-size: .75rem !important;
+}
+
+.h1, .h2, .h3, .h4, .h5, .h6, h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.5;
+    margin-bottom: .5rem;
+    margin-top: 0;
+}
+
+.h4, h4 {
+    font-size: 1rem;
+}
+
+.h5, h5 {
+    font-size: .875rem;
+}
+
 .text-gradient {
     background: var(--text-linear-gradient);
     background-size: 300% 100%;
@@ -15,4 +39,8 @@
 
 .text-purple {
     color: var(--purple);
+}
+
+.small, small {
+    font-size: .875em;
 }

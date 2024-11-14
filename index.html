@@ -68,7 +68,7 @@
     </script>
 </head>
 <body>
-    <div class="content-wrapper">
+    <main class="content-wrapper flex-shrink-0">
         <!-- Progress Indicator -->
         <div class="line">
             <div class="inner"></div>
@@ -166,24 +166,24 @@
 
                         <!-- Searching for Students -->
                         <div class="col d-flex justify-content-center" id="student-searching">
-                            <!-- Student Search Result -->
+                            <!-- Engaged Students -->
                             <div class="d-block student-search-result shadow-lg rounded-3 bg-blur border-light" id="first-student">
                                 <div class="avatar-group mb-2">
                                     <span class="avatar avatar-md">
                                       <!-- avatar  -->
-                                      <img alt="avatar" src="assets/images/users/avatar-1.jpg" class="rounded-circle">
+                                      <img alt="avatar" src="assets/images/user/avatar-1.jpg" class="rounded-circle">
                                     </span>
                                     <!-- avatar  -->
                                     <span class="avatar avatar-md">
-                                      <img alt="avatar" src="assets/images/users/avatar-2.jpg" class="rounded-circle">
+                                      <img alt="avatar" src="assets/images/user/avatar-2.jpg" class="rounded-circle">
                                     </span>
                                     <!-- avatar  -->
                                     <span class="avatar avatar-md">
-                                      <img alt="avatar" src="assets/images/users/avatar-3.jpg" class="rounded-circle">
+                                      <img alt="avatar" src="assets/images/user/avatar-3.jpg" class="rounded-circle">
                                     </span>
                                     <!-- avatar  -->
                                     <span class="avatar avatar-md">
-                                      <img alt="avatar" src="assets/images/users/avatar-4.jpg" class="rounded-circle">
+                                      <img alt="avatar" src="assets/images/user/avatar-4.jpg" class="rounded-circle">
                                     </span>
                                 </div>
                                 <div class="d-flex align-items-center">
@@ -203,13 +203,13 @@
                                     </div>
                                 </div>
                             </div>
-                            <!-- /.Student Search Result -->
+                            <!-- /.Engaged Students -->
 
                             <!-- Student Search Result -->
                             <div class="d-block student-search-result shadow-lg rounded-3 bg-blur border-light" id="second-student">
                                 <div class="d-flex align-items-start">
                                     <div class="d-block text-center">
-                                        <img src="assets/images/users/craig.jpg" alt="Avril" class="rounded-circle me-2" height="40" width="40">
+                                        <img src="assets/images/user/craig.jpg" alt="Avril" class="rounded-circle me-2" height="40" width="40">
                                     </div>
                                     <div class="d-block text-start student-info">
                                         <div class="title-placeholder"></div>
@@ -224,7 +224,7 @@
                             <div class="d-block student-search-result shadow-lg rounded-3 bg-blur border-lights" id="third-student">
                                 <div class="d-flex align-items-start">
                                     <div class="d-block text-center">
-                                        <img src="assets/images/users/tatiana.jpg" alt="Avril" class="rounded-circle me-2" height="40" width="40">
+                                        <img src="assets/images/user/tatiana.jpg" alt="Avril" class="rounded-circle me-2" height="40" width="40">
                                     </div>
                                     <div class="d-block text-start student-info">
                                         <div class="title-placeholder"></div>
@@ -240,7 +240,7 @@
                                 <div class="outer-ripple"></div>
                                 <div class="middle-ripple"></div>
                                 <div class="inner-ripple">
-                                    <img src="assets/images/users/tinaking.png" alt="Dr. TinaKing" class="rounded-circle img-fluid focal-point">
+                                    <img src="assets/images/user/tinaking.png" alt="Dr. TinaKing" class="rounded-circle img-fluid focal-point">
                                 </div>
                             </div>
                             <!-- /.Ripples -->
@@ -306,10 +306,846 @@
             </div>
         </div>
         <!-- /.Content Aggregates -->
-    </div>
+
+        <!-- Popular Courses Section -->
+        <section id="popular-courses" class="container my-5 py-5">
+            <!-- Section Title -->
+            <div class="d-block text-center">
+                <h2 class="display-5 fw-bold">Most Popular Courses</h2>
+                <p class="text-muted">
+                    Whether you want to advance your career, learn a new skill, or explore a passion, we have the right course for you.
+                </p>
+            </div>
+            <!-- /.Section Title -->
+
+            <!-- Categories Nav Tabs -->
+            <ul class="nav nav-tabs mt-3" id="course-tabs" role="tablist">
+                <li class="nav-item" role="presentation">
+                  <a class="nav-link active" id="academics-tab" data-bs-toggle="tab" data-bs-target="#academics" role="button" role="tab" aria-controls="academics" aria-selected="true">Academics</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="cad-tab" data-bs-toggle="tab" data-bs-target="#cad" role="button" role="tab" aria-controls="cad" aria-selected="false">CAD</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="graphics-tab" data-bs-toggle="tab" data-bs-target="#graphics" role="button" role="tab" aria-controls="graphics" aria-selected="false">Graphics Design</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="ms-office-tab" data-bs-toggle="tab" data-bs-target="#ms-office" role="button" role="tab" aria-controls="ms-office" aria-selected="false">MS Office</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="robotics-tab" data-bs-toggle="tab" data-bs-target="#robotics" role="button" role="tab" aria-controls="robotics" aria-selected="false">Robotics</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="software-dev-tab" data-bs-toggle="tab" data-bs-target="#software-dev" role="button" role="tab" aria-controls="software-dev" aria-selected="false">Software Development</a>
+                </li>
+                <li class="nav-item" role="presentation">
+                    <a class="nav-link" id="web-dev-tab" data-bs-toggle="tab" data-bs-target="#web-dev" role="button" role="tab" aria-controls="web-dev" aria-selected="false">Web Development</a>
+                </li>
+            </ul>
+            <!-- /.Categories Nav Tabs -->
+
+             <!-- Tab Content -->
+             <div class="tab-content my-sm-1 mt-md-2" id="popular-courses">
+                <!-- Academic Content -->
+                <div class="tab-pane fade show my-4 active" id="academics" role="tabpanel" aria-labelledby="course-tabs">
+                    <div class="container">
+                        <div class="row row-cols-1 row-cols-md-2 row-cols-lg-4 g-4">
+                            <div class="col">
+                                <!-- Card -->
+                                <div class="card card-hover">
+                                    <a href="course-single.html">
+                                        <img src="assets/images/course/javascript.jpg" alt="course" class="card-img-top">
+                                    </a>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="badge bg-info-soft">Intermediate</span>
+                                            <a href="#" class="fs-5">
+                                                <i class="bi-heart align-middle"></i>
+                                            </a>
+                                        </div>
+                                        <h4 class="card-title mb-2 text-truncate-line-2">
+                                            <a href="course-single.html" class="text-inherit">
+                                                How to easily create a website with JavaScript
+                                            </a>
+                                        </h4>
+
+                                        <small>By: Claire Evans</small>
+                                        <div class="lh-1 mt-3">
+                                            <span class="align-text-top">
+                                                <span class="fs-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <span class="text-warning">4.5</span>
+                                            <span class="fs-6">(9,300)</span>
+                                        </div>
+                                    </div>
+                                    <!-- Card Footer -->
+                                    <div class="card-footer">
+                                        <div class="row align-items-center g-0">
+                                            <div class="col">
+                                                <h5 class="mb-0">$39.00</h5>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <a href="#" class="text-inherit">
+                                                    <i class="bi-cart2 text-primary align-middle me-2"></i>
+                                                    Get Enrolled
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!-- Card -->
+                                <div class="card card-hover">
+                                    <a href="course-single.html">
+                                        <img src="assets/images/course/css.jpg" alt="course" class="card-img-top">
+                                    </a>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="badge bg-danger-soft">Beginner</span>
+                                            <a href="#" class="fs-5"><i class="bi-heart align-middle"></i></a>
+                                        </div>
+                                        <h4 class="card-title mb-2 text-truncate-line-2">
+                                            <a href="course-single.html" class="text-inherit">CSS: ultimate CSS course from beginner to advanced</a>
+                                        </h4>
+
+                                        <small>By: Carolyn Welborn</small>
+                                        <div class="lh-1 mt-3">
+                                            <span class="align-text-top">
+                                                <span class="fs-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <span class="text-warning">4.5</span>
+                                            <span class="fs-6">(8,890)</span>
+                                        </div>
+                                    </div>
+                                    <!-- Card Footer -->
+                                    <div class="card-footer">
+                                        <div class="row align-items-center g-0">
+                                            <div class="col">
+                                                <h5 class="mb-0">$30.00</h5>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <a href="#" class="text-inherit">
+                                                    <i class="bi-cart2 text-primary align-middle me-2"></i>
+                                                    Get Enrolled
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!-- Card -->
+                                <div class="card card-hover">
+                                    <a href="course-single.html">
+                                        <img src="assets/images/course/react.jpg" alt="course" class="card-img-top">
+                                    </a>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="badge bg-info-soft">Intermediate</span>
+                                            <a href="#" class="fs-5"><i class="bi-heart align-middle"></i></a>
+                                        </div>
+                                        <h4 class="card-title mb-2 text-truncate-line-2"><a href="course-single.html" class="text-inherit">The Gatsby Course: build web application</a></h4>
+
+                                        <small>By: Floyd Amall</small>
+                                        <div class="lh-1 mt-3">
+                                            <span class="align-text-top">
+                                                <span class="fs-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <span class="text-warning">4.5</span>
+                                            <span class="fs-6">(13,245)</span>
+                                        </div>
+                                    </div>
+                                    <!-- Card Footer -->
+                                    <div class="card-footer">
+                                        <div class="row align-items-center g-0">
+                                            <div class="col">
+                                                <h5 class="mb-0">$34.00</h5>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <a href="#" class="text-inherit">
+                                                    <i class="bi-cart2 text-primary align-middle me-2"></i>
+                                                    Get Enrolled
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!-- Card -->
+                                <div class="card card-hover">
+                                    <a href="course-single.html">
+                                        <img src="assets/images/course/photoshop.jpg" alt="course" class="card-img-top">
+                                    </a>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="badge bg-danger-soft">Advance</span>
+                                            <a href="#" class="fs-5"><i class="bi-heart align-middle"></i></a>
+                                        </div>
+                                        <h4 class="card-title mb-2 text-truncate-line-2">
+                                            <a href="course-single.html" class="text-inherit">WordPress: introduction to wordpress for beginners</a>
+                                        </h4>
+
+                                        <small>By: Victor Elliott</small>
+                                        <div class="lh-1 mt-3">
+                                            <span class="align-text-top">
+                                                <span class="fs-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <span class="text-warning">4.5</span>
+                                            <span class="fs-6">(9,300)</span>
+                                        </div>
+                                    </div>
+                                    <!-- Card Footer -->
+                                    <div class="card-footer">
+                                        <div class="row align-items-center g-0">
+                                            <div class="col">
+                                                <h5 class="mb-0">$39.00</h5>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <a href="#" class="text-inherit">
+                                                    <i class="bi-cart2 text-primary align-middle me-2"></i>
+                                                    Get Enrolled
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!-- Card -->
+                                <div class="card card-hover">
+                                    <a href="course-single.html">
+                                        <img src="assets/images/course/react.jpg" alt="course" class="card-img-top">
+                                    </a>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="badge bg-info-soft">Intermediate</span>
+                                            <a href="#" class="fs-5"><i class="bi-heart align-middle"></i></a>
+                                        </div>
+                                        <h4 class="card-title mb-2 text-truncate-line-2"><a href="course-single.html" class="text-inherit">How to easily create a website with React</a></h4>
+                                        <!-- List -->
+                                        <small>By: Morris Mccoy</small>
+                                        <div class="lh-1 mt-3">
+                                            <span class="align-text-top">
+                                                <span class="fs-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <span class="text-warning">4.5</span>
+                                            <span class="fs-6">(7,700)</span>
+                                        </div>
+                                    </div>
+                                    <!-- Card Footer -->
+                                    <div class="card-footer">
+                                        <div class="row align-items-center g-0">
+                                            <div class="col">
+                                                <h5 class="mb-0">$29.00</h5>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <a href="#" class="text-inherit">
+                                                    <i class="bi-cart2 text-primary align-middle me-2"></i>
+                                                    Get Enrolled
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!-- Card -->
+                                <div class="card card-hover">
+                                    <a href="course-single.html">
+                                        <img src="assets/images/course/digital-marketing.jpg" alt="course" class="card-img-top">
+                                    </a>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="badge bg-success-soft">Beginner</span>
+                                            <a href="#" class="fs-5"><i class="bi-heart align-middle"></i></a>
+                                        </div>
+                                        <h4 class="card-title mb-2 text-truncate-line-2"><a href="course-single.html" class="text-inherit">GraphQL: introduction to graphQL for beginners</a></h4>
+
+                                        <small>By: Michael Cundiff</small>
+                                        <div class="lh-1 mt-3">
+                                            <span class="align-text-top">
+                                                <span class="fs-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <span class="text-warning">4.5</span>
+                                            <span class="fs-6">(9,300)</span>
+                                        </div>
+                                    </div>
+                                    <!-- Card Footer -->
+                                    <div class="card-footer">
+                                        <div class="row align-items-center g-0">
+                                            <div class="col">
+                                                <h5 class="mb-0">Free</h5>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <a href="#" class="text-inherit">
+                                                    <i class="bi-cart2 text-primary align-middle me-2"></i>
+                                                    Get Enrolled
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!-- Card -->
+                                <div class="card card-hover">
+                                    <a href="course-single.html">
+                                        <img src="assets/images/course/angular.jpg" alt="course" class="card-img-top">
+                                    </a>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="badge bg-danger-soft">Advance</span>
+                                            <a href="#" class="fs-5"><i class="bi-heart align-middle"></i></a>
+                                        </div>
+                                        <h4 class="card-title mb-2 text-truncate-line-2"><a href="course-single.html" class="text-inherit">Angular - the complete guide for beginner</a></h4>
+
+                                        <small>By: Jeffrey McCoy</small>
+                                        <div class="lh-1 mt-3">
+                                            <span class="align-text-top">
+                                                <span class="fs-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <span class="text-warning">4.5</span>
+                                            <span class="fs-6">(8,890)</span>
+                                        </div>
+                                    </div>
+                                    <!-- Card Footer -->
+                                    <div class="card-footer">
+                                        <div class="row align-items-center g-0">
+                                            <div class="col">
+                                                <h5 class="mb-0">$49.00</h5>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <a href="#" class="text-inherit">
+                                                    <i class="bi-cart2 text-primary align-middle me-2"></i>
+                                                    Get Enrolled
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col">
+                                <!-- Card -->
+                                <div class="card card-hover">
+                                    <a href="course-single.html"><img src="assets/images/course/python.jpg" alt="card" class="card-img-top"></a>
+                                    <!-- Card Body -->
+                                    <div class="card-body">
+                                        <div class="d-flex justify-content-between align-items-center mb-3">
+                                            <span class="badge bg-success-soft">Beginner</span>
+                                            <a href="#" class="fs-5"><i class="bi-heart align-middle"></i></a>
+                                        </div>
+                                        <h4 class="card-title mb-2 text-truncate-line-2"><a href="course-single.html" class="text-inherit">The Python Course: build web application</a></h4>
+
+                                        <small>By: Douglas Howell</small>
+                                        <div class="lh-1 mt-3">
+                                            <span class="align-text-top">
+                                                <span class="fs-6">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="12" height="12" fill="currentColor" class="bi bi-star-fill text-warning" viewBox="0 0 16 16">
+                                                        <path d="M3.612 15.443c-.386.198-.824-.149-.746-.592l.83-4.73L.173 6.765c-.329-.314-.158-.888.283-.95l4.898-.696L7.538.792c.197-.39.73-.39.927 0l2.184 4.327 4.898.696c.441.062.612.636.282.95l-3.522 3.356.83 4.73c.078.443-.36.79-.746.592L8 13.187l-4.389 2.256z"></path>
+                                                    </svg>
+                                                </span>
+                                            </span>
+                                            <span class="text-warning">4.5</span>
+                                            <span class="fs-6">(13,245)</span>
+                                        </div>
+                                    </div>
+                                    <!-- Card Footer -->
+                                    <div class="card-footer">
+                                        <div class="row align-items-center g-0">
+                                            <div class="col">
+                                                <h5 class="mb-0">$19.00</h5>
+                                            </div>
+
+                                            <div class="col-auto">
+                                                <a href="#" class="text-inherit">
+                                                    <i class="bi-cart2 text-primary align-middle me-2"></i>
+                                                    Get Enrolled
+                                                </a>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!-- /.Academic Content -->
+
+                <!-- CAD Content -->
+                <div class="tab-pane fade my-4" id="cad" role="tabpanel" aria-labelledby="cad-tab">
+                    <div class="container">    
+                        <div class="row g-4">
+                            <!-- Card item START -->
+                            <div class="col-sm-6 col-lg-4 col-xl-3">
+                                <div class="card shadow h-100">
+                                    <!-- Image -->
+                                    <img src="assets/images/course/python.jpg" class="card-img-top" alt="course image">
+                                    <div class="card-body pb-0">
+                                        <!-- Badge and favorite -->
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+                                            <a href="#" class="h6 fw-light mb-0"><i class="bi-heart"></i></a>
+                                        </div>
+                                        <!-- Title -->
+                                        <h5 class="card-title fw-normal">
+                                            <a href="#">The Complete Web Development in python</a>
+                                        </h5>
+                                        <p class="text-truncate-2 mb-2">Mention Mr manners opinion if garrets enabled.</p>
+                                        <!-- Rating star -->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star-half-alt text-warning"></i></li>
+                                            <li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Card footer -->
+                                    <div class="card-footer pt-0 pb-3">
+                                        <hr>
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <span class="h6 fw-light mb-0"><i class="bi-clock text-danger me-2"></i>10h 00m</span>
+                                            <span class="h6 fw-light mb-0"><i class="bi-table text-orange me-2"></i>26 lectures</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card item END -->
+        
+                            <!-- Card item START -->
+                            <div class="col-sm-6 col-lg-4 col-xl-3">
+                                <div class="card shadow h-100">
+                                    <!-- Image -->
+                                    <img src="assets/images/course/angular.jpg" class="card-img-top" alt="course image">
+                                    <div class="card-body pb-0">
+                                        <!-- Badge and favorite -->
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="#" class="badge bg-info bg-opacity-10 text-info">Intermediate</a>
+                                            <a href="#" class="h6 fw-light mb-0"><i class="bi-heart"></i></a>
+                                        </div>
+                                        <!-- Title -->
+                                        <h5 class="card-title fw-normal"><a href="#">Angular – The Complete Guider</a></h5>
+                                        <p class="text-truncate-2 mb-2">Rooms oh fully taken by worse do. Points afraid but may end.</p>
+                                        <!-- Rating star -->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star-half-alt text-warning"></i></li>
+                                            <li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Card footer -->
+                                    <div class="card-footer pt-0 pb-3">
+                                        <hr>
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <span class="h6 fw-light mb-0"><i class="bi-clock text-danger me-2"></i>9h 32m</span>
+                                            <span class="h6 fw-light mb-0"><i class="bi-table text-orange me-2"></i>42 lectures</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card item END -->
+        
+                            <!-- Card item START -->
+                            <div class="col-sm-6 col-lg-4 col-xl-3">
+                                <div class="card shadow">
+                                    <!-- Image -->
+                                    <img src="assets/images/course/react.jpg" class="card-img-top" alt="course image">
+                                    <div class="card-body pb-0">
+                                        <!-- Badge and favorite -->
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+                                            <a href="#" class="text-danger"><i class="bi-heart"></i></a>
+                                        </div>
+                                        <!-- Title -->
+                                        <h5 class="card-title fw-normal"><a href="#">Deep Learning with React-Native</a></h5>
+                                        <p class="text-truncate-2 mb-2">Far advanced settling say finished raillery. Offered chiefly farther</p>
+                                        <!-- Rating star -->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item ms-2 h6 fw-light mb-0">4.0/5.0</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Card footer -->
+                                    <div class="card-footer pt-0 pb-3">
+                                        <hr>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="h6 fw-light mb-0"><i class="bi-clock text-danger me-2"></i>18h 56m</span>
+                                            <span class="h6 fw-light mb-0"><i class="bi-table text-orange me-2"></i>99 lectures</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card item END -->
+        
+                            <!-- Card item START -->
+                            <div class="col-sm-6 col-lg-4 col-xl-3">
+                                <div class="card shadow h-100">
+                                    <!-- Image -->
+                                    <img src="assets/images/course/javascript.jpg" class="card-img-top" alt="course image">
+                                    <div class="card-body pb-0">
+                                        <!-- Badge and favorite -->
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="#" class="badge bg-purple bg-opacity-10 text-purple">All level</a>
+                                            <a href="#" class="h6 fw-light mb-0"><i class="bi-heart"></i></a>
+                                        </div>
+                                        <!-- Title -->
+                                        <h5 class="card-title fw-normal"><a href="#">JavaScript: Full Understanding</a></h5>
+                                        <p class="text-truncate-2 mb-2">Far advanced settling say finished raillery. Offered chiefly farther</p>
+                                        <!-- Rating star -->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item ms-2 h6 fw-light mb-0">5.0/5.0</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Card footer -->
+                                    <div class="card-footer pt-0 pb-3">
+                                        <hr>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="h6 fw-light mb-0"><i class="bi-clock text-danger me-2"></i>35h 20m</span>
+                                            <span class="h6 fw-light mb-0"><i class="bi-table text-orange me-2"></i>89 lectures</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card item END -->
+        
+                            <!-- Card item START -->
+                            <div class="col-sm-6 col-lg-4 col-xl-3">
+                                <div class="card shadow h-100">
+                                    <!-- Image -->
+                                    <img src="assets/images/course/bootstrap.jpg" class="card-img-top" alt="course image">
+                                    <div class="card-body pb-0">
+                                        <!-- Badge and favorite -->
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="#" class="badge bg-info bg-opacity-10 text-info">Intermediate</a>
+                                            <a href="#" class="text-danger"><i class="bi-heart"></i></a>
+                                        </div>
+                                        <!-- Title -->
+                                        <h5 class="card-title fw-normal"><a href="#">Bootstrap 5 From Scratch</a></h5>
+                                        <p class="text-truncate-2 mb-2">Far advanced settling say finished raillery. Offered chiefly farther</p>
+                                        <!-- Rating star -->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star-half-alt text-warning"></i></li>
+                                            <li class="list-inline-item ms-2 h6 fw-light mb-0">4.5/5.0</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Card footer -->
+                                    <div class="card-footer pt-0 pb-3">
+                                        <hr>
+                                        <div class="d-flex justify-content-between mt-2">
+                                            <span class="h6 fw-light mb-0"><i class="bi-clock text-danger me-2"></i>25h 56m</span>
+                                            <span class="h6 fw-light mb-0"><i class="bi-table text-orange me-2"></i>38 lectures</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card item END -->
+        
+                            <!-- Card item START -->
+                            <div class="col-sm-6 col-lg-4 col-xl-3">
+                                <div class="card shadow h-100">
+                                    <!-- Image -->
+                                    <img src="assets/images/course/php.jpg" class="card-img-top" alt="course image">
+                                    <div class="card-body pb-0">
+                                        <!-- Badge and favorite -->
+                                        <div class="d-flex justify-content-between mb-2">
+                                            <a href="#" class="badge bg-success bg-opacity-10 text-success">Beginner</a>
+                                            <a href="#" class="h6 fw-light mb-0"><i class="bi-heart"></i></a>
+                                        </div>
+                                        <!-- Title -->
+                                        <h5 class="card-title fw-normal"><a href="#">PHP with - CMS Project</a></h5>
+                                        <p class="text-truncate-2 mb-2">Far advanced settling say finished raillery. Offered chiefly farther</p>
+                                        <!-- Rating star -->
+                                        <ul class="list-inline mb-0">
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item me-0 small"><i class="bi-star text-warning"></i></li>
+                                            <li class="list-inline-item ms-2 h6 fw-light mb-0">4.0/5.0</li>
+                                        </ul>
+                                    </div>
+                                    <!-- Card footer -->
+                                    <div class="card-footer pt-0 pb-3">
+                                        <hr>
+                                        <div class="d-flex justify-content-between">
+                                            <span class="h6 fw-light mb-0"><i class="bi-clock text-danger me-2"></i>21h 22m</span>
+                                            <span class="h6 fw-light mb-0"><i class="bi-table text-orange me-2"></i>30 lectures</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- Card item END -->
+                        </div>
+                    </div>
+                </div>
+                <!-- /.CAD Content -->
+
+                <!-- Graphics Design Content -->
+                <div class="tab-pane fade my-4" id="graphics" role="tabpanel" aria-labelledby="graphics-tab">
+                    <div class="container">    
+                        <h3 class="text-capitalize">Graphics Design Content</h3>
+                    </div>
+                </div>
+                <!-- /.Graphics Design Content -->
+
+                <!-- MS Office Content -->
+                <div class="tab-pane fade my-4" id="ms-office" role="tabpanel" aria-labelledby="ms-office-tab">
+                    <div class="container">    
+                        <h3 class="text-capitalize">MS Office Content</h3>
+                    </div>
+                </div>
+                <!-- /.MS Office Content -->
+
+                <!-- Robotics Content -->
+                <div class="tab-pane fade my-4" id="robotics" role="tabpanel" aria-labelledby="robotics-tab">
+                    <div class="container">    
+                        <h3 class="text-capitalize">Robotics Content</h3>
+                    </div>
+                </div>
+                <!-- /.Robotics Content -->
+
+                <!-- Software Dev Content -->
+                <div class="tab-pane fade my-4" id="software-dev" role="tabpanel" aria-labelledby="software-dev-tab">
+                    <div class="container">    
+                        <h3 class="text-capitalize">Software Dev Content</h3>
+                    </div>
+                </div>
+                <!-- /.Software Dev Content -->
+
+                <!-- Web Dev Content -->
+                <div class="tab-pane fade my-4" id="web-dev" role="tabpanel" aria-labelledby="web-dev-tab">
+                    <div class="container">    
+                        <h3 class="text-capitalize">Web Dev Content</h3>
+                    </div>
+                </div>
+                <!-- /.Web Dev Content -->
+        </section>
+        <!-- /.Popular Courses Section -->
+    </main>
 
     <!-- Footer -->
-    <footer class="footer"></footer>
+    <footer class="footer mt-auto">
+        <div class="container">
+            <div class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 border-top">
+                <div class="col mb-3">
+                <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+                    <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                </a>
+                <p class="text-body-secondary">&copy; 2024</p>
+                </div>
+            
+                <div class="col mb-3">
+            
+                </div>
+            
+                <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+                </div>
+            
+                <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+                </div>
+            
+                <div class="col mb-3">
+                <h5>Section</h5>
+                <ul class="nav flex-column">
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+                    <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+                </ul>
+                </div>
+            </div>
+
+            <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+                <p class="col-md-4 mb-0 text-body-secondary">&copy; 2024 Company, Inc</p>
+            
+                <a href="/" class="col-md-4 d-flex align-items-center justify-content-center mb-3 mb-md-0 me-md-auto link-body-emphasis text-decoration-none">
+                  <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"/></svg>
+                </a>
+            
+                <ul class="nav col-md-4 justify-content-end">
+                  <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Home</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Features</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">Pricing</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">FAQs</a></li>
+                  <li class="nav-item"><a href="#" class="nav-link px-2 text-body-secondary">About</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
     <!-- /.Footer -->
 
     <!-- Bootstrap JS -->

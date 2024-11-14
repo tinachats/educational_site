@@ -1,0 +1,18 @@
+.card-title,
+.text-truncate-line-2 {
+    max-height: 3rem;
+    overflow: hidden;
+}
+
+.card-title>a,
+.text-truncate-line-2>a {
+    color: var(--purple);
+    text-decoration: none !important;
+    text-transform: capitalize;
+}
+
+.card-footer {
+    background-color: var(--white);
+    border-top: 1px solid var(--border-color);
+    padding: 1rem 1.5rem;
+}

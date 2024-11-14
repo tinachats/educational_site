@@ -11,5 +11,30 @@
     --purple: #754ffe;
     --primary-color: var(--app-color);
     --primary-dark-color: var(--app-dark-color);
+    --shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
+    --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
     --white: #fff; 
+}
+
+.bg-danger-soft {
+    background-color: rgba(220, 38, 38, .1) !important;
+    color: #dc2626 !important;
+}
+
+.bg-info-soft {
+    background-color: rgba(14, 165, 233, .1) !important;
+    color: #0ea5e9 !important;
+}
+
+.bg-success-soft {
+    background-color: rgba(56, 161, 105, .1) !important;
+    color: #38a169 !important;
+}
+
+.badge {
+    padding: 0.33rem 0.5rem;
+    font-size: 0.75rem;
+    font-weight: 500;
+    color: inherit;
+    border-radius: 0.375rem;
 }
