@@ -1,0 +1,23 @@
+{
+  "name": "educational_site",
+  "version": "1.0.0",
+  "description": "This is an education site where Dr. TinaKing will be teaching several subjects covering engineering, design, math, and physics.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "educational_site"
+  },
+  "keywords": [
+    "educational_site",
+    "learning",
+    "coding",
+    "design",
+    "simulation",
+    "development"
+  ],
+  "author": "tinashe chaterera",
+  "license": "ISC"
+}

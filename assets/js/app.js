@@ -49,8 +49,6 @@ function animateNumbers() {
     });
 }
 
-window.addEventListener('load', animateNumbers);
-
 // Typing animation for a student request
 const words = [
   'project', 'assignment', 'dissertation', 'homework',
