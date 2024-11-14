@@ -15,8 +15,6 @@ function changeCourse() {
     currentIndex = (currentIndex + 1) % courseList.length;
 }
 
-setInterval(changeCourse, 1500); // Change course every 1 and half second
-
 // Animate numbers when they get into the viewport
 function animateNumbers() {
     const animatedNumbers = document.querySelectorAll('.animated-number');
@@ -52,3 +50,32 @@ function animateNumbers() {
 }
 
 window.addEventListener('load', animateNumbers);
+
+// Typing animation for a student request
+const words = [
+  'project', 'assignment', 'dissertation', 'homework',
+  'idea', 'presentation', 'tuition', 'coursework', 'website',
+  'code', 'robotics project', 'design', 'simulation', 'circuit',
+  'Arduino project', 'Raspberry Pi project', 'technical drawing'
+];
+
+const typingText = document.getElementById('typing-text');
+let wordIndex = 0;
+let charIndex = 0;
+
+function type() {
+  const word = words[wordIndex];
+
+  typingText.textContent = `${word.slice(0, charIndex + 1)}|`;
+
+  charIndex++;
+
+  if (charIndex > word.length) {
+    charIndex = 0;
+    wordIndex = (wordIndex + 1) % words.length;
+  }
+
+  setTimeout(type, 250); // Adjust the delay as needed
+}
+
+

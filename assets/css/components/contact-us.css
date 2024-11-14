@@ -1,0 +1,9 @@
+#contact-us .paint-splash {
+    position: relative;
+}
+
+#contact-us .paint-splash {
+    position: absolute;
+    right: 0;
+    top: -20%;
+}
