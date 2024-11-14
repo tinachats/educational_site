@@ -1,0 +1,26 @@
+.dropdown-menu {
+    box-shadow: 0 8px 12px 1px rgba(11, 9, 36, .29);
+    padding: .5rem;
+    z-index: 1021;
+}
+
+.dropdown-item {
+    color: var(--text-muted);
+    margin-top: .5rem;
+}
+
+.dropdown-item.active, 
+.dropdown-item:active,
+.dropdown-item:hover {
+    text-decoration: none;
+    background-color: #37465b;
+    border-radius: 5px;
+    color: var(--purple);
+}
+
+
+.dropdown-item.active, 
+.dropdown-item:active {
+    color: var(--purple);
+}
+

@@ -1,0 +1,55 @@
+.footer {
+    background-color: var(--dark);
+    color: #fff;
+}
+
+.footer #footer-logo {
+    width: 100%;
+    height: 60px;
+}
+
+.nav-footer .nav-link:hover {
+    color: var(--purple);
+}
+.nav-x-0 .nav-link {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+.nav-footer .nav-link {
+    font-size: .875rem;
+    line-height: 1.5rem;
+    padding: .2rem 1rem;
+}
+.footer, .nav-footer .nav-link {
+    color: #37465b;
+}
+
+.btn-scroll-top.active-progress {
+    transform: translateY(0);
+    visibility: visible;
+}
+.btn-scroll-top, .btn-scroll-top:after {
+    cursor: pointer;
+    display: block;
+    height: 3rem;
+    width: 3rem;
+}
+.btn-scroll-top {
+    background-color: #fff;
+    border-radius: 10px;
+    bottom: 1.5rem;
+    box-shadow: inset 0 0 0 .1rem rgba(227, 229, 233, .25);
+    opacity: 0;
+    position: fixed;
+    right: 1.5rem;
+    transform: translateY(.75rem);
+    transition: all .2s linear, margin-right 0s;
+    visibility: hidden;
+    z-index: 1010;
+}
+
+@media (min-width: 320px) {
+    .btn-scroll-top.active-progress {
+        opacity: 1;
+    }
+}
