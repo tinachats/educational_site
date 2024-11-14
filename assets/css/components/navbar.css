@@ -15,6 +15,10 @@
     margin-bottom: 0;
 }
 
+.navbar .btn {
+    font-size: var(--text-sm);
+}
+
 /* Color Gradient Preloader */
 
 .line {

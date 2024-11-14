@@ -33,8 +33,12 @@ body {
     padding-bottom: 7rem;
 }
 
-.navbar .btn {
-    font-size: var(--text-sm);
+.illustration-wrapper {
+    position: relative;
+    display: block;
+    text-align: center;
+    width: 500px;
+    height: 500px;
 }
 
 footer.footer {
