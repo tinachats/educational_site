@@ -5,6 +5,7 @@
     --black: #000;
     --border-color: #dee2e6;
     --light: #f8f9fa;
+    --light-purple: #ebeeff;
     --linear-gradient: linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);
     --text-linear-gradient: linear-gradient(74deg, #4285f4 0,#9b72cb 9%,#d96570 20%,#d96570 24%,#9b72cb 35%,#4285f4 44%,#9b72cb 50%,#d96570 56%,#fff 75%,#fff 100%);
     --text-muted: #6c757d;
@@ -14,6 +15,12 @@
     --shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
     --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
     --white: #fff; 
+}
+
+.bg-blur {
+    background-color: transparent;
+    backdrop-filter: blur(5px);
+    --webkit-backdrop-filter: blur(5px);  
 }
 
 .bg-danger-soft {
@@ -29,6 +36,10 @@
 .bg-success-soft {
     background-color: rgba(56, 161, 105, .1) !important;
     color: #38a169 !important;
+}
+
+.bg-light-purple {
+    background-color: var(--light-purple);
 }
 
 .badge {

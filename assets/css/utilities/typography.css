@@ -37,10 +37,15 @@ a {
     
 }
 
+.text-primary,
 .text-purple {
-    color: var(--purple);
+    color: var(--purple) !important;
 }
 
 .small, small {
     font-size: .875em;
+}
+
+.closing-quote {
+    transform: scaleX(-1);
 }

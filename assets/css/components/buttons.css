@@ -17,7 +17,6 @@
 }
 
 .btn {
-    background-size: 200% auto;
     -webkit-transition: all 0.3s ease-in-out;
     transition: all 0.3s ease-in-out;
     padding: var(--btn-p-y) var(--btn-p-x);
@@ -38,13 +37,16 @@
 }
 
 .btn-primary {
-    opacity: 0.85;
+    background-size: 200% auto;
 }
 
-.btn-primary:hover {
+.btn-primary:hover,
+.btn-outline-primary:hover, 
+.btn-outline-primary:focus,
+.btn-outline-primary:focus-within,
+.btn-outline-primary:active {
     color: #fff !important;
     background-position: right center !important;
-    opacity: 1;
 }
 
 .btn-outline-primary {
