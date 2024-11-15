@@ -27,7 +27,7 @@
     width: 100%;
     background: #8599c4;
     z-index: 11000;
-    position: absolute;
+    position: fixed;
     top: 0;
 }
 

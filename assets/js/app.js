@@ -52,7 +52,7 @@ function animateNumbers() {
 // Typing animation for a student request
 const words = [
   'project', 'assignment', 'dissertation', 'homework',
-  'idea', 'presentation', 'tuition', 'coursework', 'website',
+  'idea', 'presentation', 'extra lessons', 'coursework', 'website',
   'code', 'robotics project', 'design', 'simulation', 'circuit',
   'Arduino project', 'Raspberry Pi project', 'technical drawing'
 ];
@@ -76,8 +76,59 @@ function type() {
   setTimeout(type, 250); // Adjust the delay as needed
 }
 
-// Function for phone calling
-function callNumber() {
-  window.location.href = 'tel:+263776021140';
+// Business Hours
+function checkBusinessHours() {
+  const currentDate = new Date();
+  const dayOfWeek = currentDate.getDay(); // 0 (Sunday) to 6 (Saturday)
+  const hours = currentDate.getHours();
+  const minutes = currentDate.getMinutes();
+
+  const openingHours = [
+    { day: 0, open: 13, close: 16 }, // Sunday
+    { day: 1, open: 18, close: 22 }, // Monday
+    { day: 2, open: 14.5, close: 21 }, // Tuesday
+    { day: 3, open: 18, close: 22 }, // Wednesday
+    { day: 4, open: 14.5, close: 21 }, // Thursday
+    { day: 5, open: 14.5, close: 18 }, // Friday
+    { day: 6, open: 8.5, close: 15 }, // Saturday
+  ];
+
+  const currentDayHours = openingHours[dayOfWeek];
+  const isOpen = hours >= currentDayHours.open && hours < currentDayHours.close;
+
+  const statusElement = document.getElementById('business-status');
+  const additionalHoursElement = document.getElementById('closing-time');
+
+  if (isOpen) {
+    statusElement.textContent = 'Open';
+    statusElement.style.color = 'green';
+    additionalHoursElement.style.display = 'none';
+  } else {
+    statusElement.textContent = 'Closed';
+    statusElement.style.color = 'red';
+    additionalHoursElement.style.display = 'block';
+
+    // Calculate next opening time
+    let nextOpenDay = dayOfWeek + 1;
+    while (true) {
+      const nextDayHours = openingHours[nextOpenDay % 7];
+      if (hours < nextDayHours.open) {
+        break;
+      }
+      nextOpenDay++;
+    }
+
+    const nextOpenTime = new Date();
+    nextOpenTime.setDate(currentDate.getDate() + (nextOpenDay - dayOfWeek));
+    nextOpenTime.setHours(nextDayHours.open);
+    nextOpenTime.setMinutes(0);
+
+    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
+    const formattedNextOpenTime = new Intl.DateTimeFormat('en-US', options).format(nextOpenTime);
+
+    additionalHoursElement.textContent = formattedNextOpenTime;
+  }
 }
+
+
 
