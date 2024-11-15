@@ -76,4 +76,8 @@ function type() {
   setTimeout(type, 250); // Adjust the delay as needed
 }
 
+// Function for phone calling
+function callNumber() {
+  window.location.href = 'tel:+263776021140';
+}
 
