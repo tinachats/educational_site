@@ -77,6 +77,12 @@
     transform: translateX(10px);
 }
 
+.btn-transparent {
+    background-color: transparent;
+    border: none;
+    border-color: transparent;
+}
+
 .footer .btn-icon {
     align-items: center;
     display: inline-flex;

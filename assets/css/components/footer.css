@@ -21,9 +21,14 @@
     padding: .2rem 1rem;
 }
 .footer, .nav-footer .nav-link {
-    color: #37465b;
+    color: #64748b;
 }
 
+@media (min-width: 320px) {
+    .btn-scroll-top.active-progress {
+        opacity: 1;
+    }
+}
 .btn-scroll-top.active-progress {
     transform: translateY(0);
     visibility: visible;
@@ -35,7 +40,6 @@
     width: 3rem;
 }
 .btn-scroll-top {
-    background-color: #fff;
     border-radius: 10px;
     bottom: 1.5rem;
     box-shadow: inset 0 0 0 .1rem rgba(227, 229, 233, .25);
@@ -48,8 +52,8 @@
     z-index: 1010;
 }
 
-@media (min-width: 320px) {
-    .btn-scroll-top.active-progress {
-        opacity: 1;
-    }
+svg {
+    touch-action: none;
+    vertical-align: middle;
 }
+

@@ -71,21 +71,23 @@
     </script>
 
     <script>
+        // Car image
+        const whiteVan = 'assets/images/app/white_van.png';
+
+        // Business Logo
+        const businessLogo = 'assets/images/app/dr-tinaking-black-logo.png';
+
         // My coordinations
-        const myLatCoord = -17.74777307115116; 
-        const myLonCoord = 31.015588857672093;
+        const businessLocation = {
+            lat: -17.7464668454956, 
+            lng: 31.016642406010643
+        };
+
         var map;
-        var carMarker;
-        var step = 0;
-        var numSteps = 250; // Change this value to set animation speed
-        var delay = 10; // Delay between steps in milliseconds
-        var line;
-        var destinationPosition;
-        var currentPosition;
 
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
-                center: {lat: myLatCoord, lng: myLonCoord},
+                center: businessLocation,
                 zoom: 14
             });
 
@@ -100,22 +102,20 @@
                         lat: position.coords.latitude,
                         lng: position.coords.longitude
                     };
-        
-                    const destination = { lat: myLatCoord, lng: myLonCoord }; 
+
+                    const destination = businessLocation; 
                     
                     const request = {
                         origin: userLocation,
                         destination: destination,
-                        travelMode: 'DRIVING'
+                        travelMode: google.maps.TravelMode.DRIVING
                     };
                     
                     directionsService.route(request, (result, status) => {
-                        businessMarker(myLatCoord, myLonCoord);
-                        if (status == 'OK') {
+                        businessMarker(businessLocation);
+                        if (status === 'OK') {
                             directionsRenderer.setDirections(result);
-                            var route = response.routes[0].overview_path;
-                            carMarker(origin);
-                            animateCar(route);
+                            carMarker(userLocation);
                         } else {
                             console.log('Directions request failed due to ' + status);
                         }
@@ -131,49 +131,33 @@
 
         function handleLocationError(browserHasGeolocation, pos) {
             console.log(browserHasGeolocation 
-                  ? 'Error: The Geolocation service failed.' 
-                  : 'Error: Your browser doesn\'t support geolocation.');
+                ? 'Error: The Geolocation service failed.' 
+                : 'Error: Your browser doesn\'t support geolocation.');
         } 
 
-        function carMarker(position) {
-            carMarker = new google.maps.Marker({
-                position: position,
-                map: map,
-                title: 'Your current location',
-                icon: {
-                    url: 'assets/images/app/white_van.png', 
-                    scaledSize: new google.maps.Size(360, 360)
-                }
-            });
-        }
-
-        function businessMarker(busLatCoord, busLngCoord) {
-            const busLatLng = {lat: busLatCoord, lng: busLngCoord};
-        
+        function businessMarker(position) {
             var marker = new google.maps.Marker({
-                position: busLatLng,
+                position: position,
                 map: map,
                 title: 'Dr. TinaKing Business Address',
                 icon: {
-                    url: 'assets/images/app/dr-tinaking-black-logo.png',
+                    url: businessLogo,
                     scaledSize: new google.maps.Size(249, 50)
                 }
             });
         }
 
-        function animateCar(route) {
-            line = new google.maps.Polyline({path: [route[step]], map: map});
-
-            function moveCar() {
-                step += 1;
-                if (step >= route.length) return;
-                line.getPath().push(route[step]);
-                carMarker.setPosition(route[step]);
-                setTimeout(moveCar, delay);
-            }
-
-            moveCar();
-        }     
+        function carMarker(position) {
+            var carMapMarker = new google.maps.Marker({ 
+                position: position,
+                map: map,
+                title: 'Your current location',
+                icon: {
+                    url: whiteVan, 
+                    scaledSize: new google.maps.Size(100, 100)
+                }
+            });
+        }
     </script>
 </head>
 <body class="position-relative">
@@ -1562,9 +1546,11 @@
                 <div class="row g-4 my-5">
                     <!-- Location -->
                     <div class="col">
-                        <!-- The div element for the map -->
-                        <div class="shadow-lg border-light" id="map"></div>
-                        <!-- /.The div element for the map -->
+                        <div class="map-wrapper shadow-lg border-light position-relative">
+                            <!-- The div element for the map -->
+                            <div id="map"></div>
+                            <!-- /.The div element for the map -->
+                        </div>
 
                         <!-- Location Address -->
                         <div class="card card-body rounded-3 shadow-lg my-3">
@@ -1600,10 +1586,13 @@
 
                                     <!-- Business Hours -->
                                     <div class="d-flex align-items-center mt-2">
-                                        <span class="fw-bold">Hours: </span>
-                                        <span id="business-status" class="ms-2">Open</span>
-                                        <i class="bi-dot"></i>
-                                        <span class="ms-2" id="closing-time"></span>
+                                        <div class="dropdown">
+                                            <button class="btn btn-transparent dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                                <span class="business-status"></span>
+                                                <span class="next-business-status text-muted ms-2"></span>
+                                            </button>
+                                            <ul class="dropdown-menu" id="business-hours"></ul>
+                                        </div>
                                     </div>
                                     <!-- /.Business Hours -->
                                 </div>
@@ -1763,7 +1752,11 @@
                         <div>
                             <img id="footer-logo" src="assets/images/app/dr-tinaking-white-logo.png" alt="Dr. TinaKing's logo">
                         </div>
-                        <p class="text-sm mb-0">Nascetur nibh feugiat vulputate urna mauris tincidunt porttitor ultricies. Et dis augue praesent congue.</p>
+                        <p class="text-sm mb-0">
+                            We invest: our time with people who inspire,
+                            our talent with people who create, and our 
+                            money with people who produce. 
+                        </p>
                         <div class="d-flex gap-2">
                             <a href="#langaugeModal" class="btn btn-outline-secondary" data-bs-toggle="modal">
                                 <span>
@@ -1866,15 +1859,18 @@
                             <ul class="list-unstyled mb-0 d-flex flex-column nav nav-footer nav-x-0">
                                 <li>
                                     Call:
-                                    <span class="fw-normal ms-2">+263 776 021 140</span>
+                                    <span class="fw-normal ms-2">+263 77 602 1140</span>
                                 </li>
-                                <li>
+                                <li class="d-flex align-items-center">
                                     Time:
-                                    <span class="fw-normal ms-2">9AM to 8PM </span>
+                                    <div class="d-flex align-items-center">
+                                        <span class="business-status fw-normal mx-2"></span>
+                                        <span class="next-business-status"></span>
+                                    </div>
                                 </li>
                                 <li class="d-flex align-items-center">
                                     Email:
-                                    <span class="fw-normal ms-2">marshallchaterera@gmail.com</span>
+                                    <span class="fw-normal ms-2">tinashe@dr-tinaking.com</span>
                                 </li>
                             </ul>
                         </div>
@@ -1886,12 +1882,8 @@
                 <div class="col-lg-6 col-12 text-center text-md-start">
                     <span>
                         ©
-                        <span id="copyright">
-                            <script>
-                                document.getElementById('copyright').appendChild(document.createTextNode(new Date().getFullYear()));
-                            </script>
-                        </span>
-                        Dr. TinaKing
+                        <span id="year"></span>
+                        Dr. TinaKing. All Rights Reserved.
                     </span>
                 </div>
                 <!-- Links -->
@@ -1910,7 +1902,7 @@
     <!-- Scroll-to-Top Button -->
     <div class="btn-scroll-top active-progress">
         <svg class="progress-square svg-content" width="100%" height="100%" viewBox="0 0 40 40">
-            <path d="M8 1H32C35.866 1 39 4.13401 39 8V32C39 35.866 35.866 39 32 39H8C4.13401 39 1 35.866 1 32V8C1 4.13401 4.13401 1 8 1Z" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 139.989, 139.989; stroke-dashoffset: 0.00869864;"></path>
+            <path d="M8 1H32C35.866 1 39 4.13401 39 8V32C39 35.866 35.866 39 32 39H8C4.13401 39 1 35.866 1 32V8C1 4.13401 4.13401 1 8 1Z" style="transition: stroke-dashoffset 10ms linear; stroke-dasharray: 139.989, 139.989; stroke-dashoffset: 21.9473;"></path>
         </svg>
     </div>
     <!-- /.Scroll-to-Top Button -->
@@ -1943,17 +1935,21 @@
             })
         })();
 
-        // Calling the Typing Animation function
-        type();
+        document.addEventListener('DOMContentLoaded', function() {
+        
+            // Calling the Typing Animation function
+            type();
 
-        // Changing the subject every one and half second
-        setInterval(changeCourse, 1500); 
+            // Changing the subject every one and half second
+            setInterval(changeCourse, 1500); 
 
-        // Animate numbers when in viewport
-        window.addEventListener('load', animateNumbers);
+            // Animate numbers when in viewport
+            animateNumbers
 
-        // Show business hours
-        checkBusinessHours();
+            // Show business hours
+            checkBusinessStatus();
+            populateDropdown();
+        });
     </script>
 </body>
 </html>

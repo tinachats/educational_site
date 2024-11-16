@@ -76,58 +76,76 @@ function type() {
   setTimeout(type, 250); // Adjust the delay as needed
 }
 
-// Business Hours
-function checkBusinessHours() {
-  const currentDate = new Date();
-  const dayOfWeek = currentDate.getDay(); // 0 (Sunday) to 6 (Saturday)
-  const hours = currentDate.getHours();
-  const minutes = currentDate.getMinutes();
+// Set Business Hours
+const hours = {
+    0: { open: '13:00', close: '16:00' }, // Sunday
+    1: { open: '18:00', close: '22:00' }, // Monday
+    2: { open: '18:00', close: '22:00' }, // Tuesday
+    3: { open: '18:00', close: '22:00' }, // Wednesday
+    4: { open: '18:00', close: '22:00' }, // Thursday
+    5: { open: '14:30', close: '21:00' }, // Friday
+    6: { open: '08:30', close: '15:00' }  // Saturday
+};
 
-  const openingHours = [
-    { day: 0, open: 13, close: 16 }, // Sunday
-    { day: 1, open: 18, close: 22 }, // Monday
-    { day: 2, open: 14.5, close: 21 }, // Tuesday
-    { day: 3, open: 18, close: 22 }, // Wednesday
-    { day: 4, open: 14.5, close: 21 }, // Thursday
-    { day: 5, open: 14.5, close: 18 }, // Friday
-    { day: 6, open: 8.5, close: 15 }, // Saturday
-  ];
+// Declare days of the week
+const daysOfWeek = ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday'];
+const statusElements = document.querySelectorAll('.business-status');
+const nextBusinessEvents = document.querySelectorAll('.next-business-status');
+const dropdownContent = document.getElementById('business-hours');
+const now = new Date();
+const today = now.getDay();
+const currentTime = now.getHours() * 60 + now.getMinutes();
+const year = now.getFullYear();
+document.getElementById('year').innerHTML = year;
 
-  const currentDayHours = openingHours[dayOfWeek];
-  const isOpen = hours >= currentDayHours.open && hours < currentDayHours.close;
+function formatTime(time) {
+    const [hours, minutes] = time.split(':').map(Number);
+    return hours * 60 + minutes;
+}
 
-  const statusElement = document.getElementById('business-status');
-  const additionalHoursElement = document.getElementById('closing-time');
+function checkBusinessStatus() {
+    const todayHours = hours[today];
+    const openTime = formatTime(todayHours.open);
+    const closeTime = formatTime(todayHours.close);
 
-  if (isOpen) {
-    statusElement.textContent = 'Open';
-    statusElement.style.color = 'green';
-    additionalHoursElement.style.display = 'none';
-  } else {
-    statusElement.textContent = 'Closed';
-    statusElement.style.color = 'red';
-    additionalHoursElement.style.display = 'block';
+    if (currentTime >= openTime && currentTime <= closeTime) {
+      statusElements.forEach(statusElement => {
+        statusElement.innerHTML = `Open.`;
+        statusElement.classList.toggle('text-success');
+      });
 
-    // Calculate next opening time
-    let nextOpenDay = dayOfWeek + 1;
-    while (true) {
-      const nextDayHours = openingHours[nextOpenDay % 7];
-      if (hours < nextDayHours.open) {
-        break;
+      nextBusinessEvents.forEach(nextBusinessStatus => {
+        nextBusinessStatus.innerHTML = `Closes ${todayHours.close}`;
+      });
+    } else {
+      let nextOpenDay = (today + 1) % 7;
+      while (!hours[nextOpenDay]) {
+          nextOpenDay = (nextOpenDay + 1) % 7;
       }
-      nextOpenDay++;
+      const nextOpenTime = hours[nextOpenDay].open;
+      statusElements.forEach(statusElement => {
+        statusElement.innerHTML = `Closed.`;
+        statusElement.classList.toggle('text-danger');
+      });
+
+      nextBusinessEvents.forEach(nextBusinessStatus => {
+        nextBusinessStatus.innerHTML = `Opens ${daysOfWeek[nextOpenDay]} at ${nextOpenTime}`;
+      });
     }
+}
 
-    const nextOpenTime = new Date();
-    nextOpenTime.setDate(currentDate.getDate() + (nextOpenDay - dayOfWeek));
-    nextOpenTime.setHours(nextDayHours.open);
-    nextOpenTime.setMinutes(0);
-
-    const options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric', hour: 'numeric', minute: 'numeric' };
-    const formattedNextOpenTime = new Intl.DateTimeFormat('en-US', options).format(nextOpenTime);
-
-    additionalHoursElement.textContent = formattedNextOpenTime;
-  }
+function populateDropdown() {
+    daysOfWeek.forEach((day, index) => {
+        if (hours[index]) {
+          const hour = hours[index];
+          const linkElement = document.createElement('li');
+          linkElement.className = 'dropdown-item';
+          const anchorTag = document.createElement('a');
+          anchorTag.innerHTML = `${day}: ${hour.open} - ${hour.close}`;
+          linkElement.appendChild(anchorTag);
+          dropdownContent.appendChild(linkElement);
+        }
+    });
 }
 
 
