@@ -38,6 +38,9 @@
     <!-- Core CSS -->
     <link rel="stylesheet" href="assets/css/app.css">
 
+    <!-- Swiper Slider CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+
     <!-- Google Maps JavaScript API -->
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCkFoSRjMyFnXFht1dYFWa-tmrccJ2ZLnQ&callback=initMap&loading=async"></script>
 
@@ -441,10 +444,10 @@
              <div class="tab-content my-sm-1 mt-md-2" id="popular-courses">
                 <!-- Academic Content -->
                 <div class="tab-pane fade show my-4 active" id="academics" role="tabpanel" aria-labelledby="course-tabs">
-                    <div class="container">
-                        <div class="row g-4">
+                    <div class="container swiper course-content">
+                        <div class="swiper-wrapper">
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -497,7 +500,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -546,7 +549,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -593,7 +596,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -642,7 +645,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -689,7 +692,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -736,7 +739,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -783,7 +786,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html"><img src="assets/images/course/python.jpg" alt="card" class="card-img-top"></a>
@@ -827,16 +830,23 @@
                             </div>
                             <!-- /.Course -->
                         </div>
+
+                        <!-- Pagination Links -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- Navigation buttons -->
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
                     </div>
                 </div>
                 <!-- /.Academic Content -->
 
                 <!-- CAD Content -->
                 <div class="tab-pane fade my-4" id="cad" role="tabpanel" aria-labelledby="cad-tab">
-                    <div class="container">    
-                        <div class="row g-4">
+                    <div class="container swiper course-content">    
+                        <div class="swiper-wrapper">
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -892,7 +902,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -944,7 +954,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -994,7 +1004,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -1046,7 +1056,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -1093,7 +1103,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -1143,7 +1153,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html">
@@ -1193,7 +1203,7 @@
                             <!-- /.Course -->
 
                             <!-- Course -->
-                            <div class="col-sm-4 col-md-3">
+                            <div class="swiper-slide">
                                 <!-- Card -->
                                 <div class="card card-hover">
                                     <a href="course-single.html"><img src="assets/images/course/python.jpg" alt="card" class="card-img-top"></a>
@@ -1240,6 +1250,13 @@
                             </div>
                             <!-- /.Course -->
                         </div>
+
+                        <!-- Pagination Links -->
+                        <div class="swiper-pagination"></div>
+
+                        <!-- Navigation buttons -->
+                        <div class="swiper-slide-button swiper-button-prev"></div>
+                        <div class="swiper-slide-button swiper-button-next"></div>
                     </div>
                 </div>
                 <!-- /.CAD Content -->
@@ -1388,142 +1405,205 @@
                         learning experiences.
                     </p>
                 </div>
+            </div>
 
+            <div class="swiper-testimonials swiper container pb-5">
                 <!-- Testimonials -->
-                <div class="row justify-content-evenly g-3 py-5">
+                <div id="testimonial-slider" class="swiper-wrapper">
                     <!-- Testimonial -->
-                    <div class="col-6 col-md-3">
-                        <div class="card card-body rounded-3 shadow-lg border-light testimonial-card bg-blur">
-                            <div class="d-flex justify-content-center flex-column text-center">
-                                <div class="img-wrapper align-self-center">
-                                    <img src="assets/images/user/bianca.jpg" alt="Bianca" class="rounded-circle">
-                                </div>
-                                <h4 class="fw-bold text-capitalize mt-2 mb-0">Gladys Colbert</h4>
-                                <p class="text-sm text-muted text-capitalize mb-0">Web developer at EaseTemplate</p>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <div class="d-flex align-items-center align-text-top">
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                    </div>
-                                    <span class="text-warning ms-2">4.5</span>
-                                </div>
+                    <div class="card card-body rounded-3 shadow-lg border-light testimonial-card swiper-slide bg-blur">
+                        <div class="d-flex justify-content-center flex-column text-center">
+                            <div class="img-wrapper align-self-center">
+                                <img src="assets/images/user/avatar-3.jpg" alt="Leigh" class="rounded-circle">
                             </div>
-
-                            <p class="text-justify mt-2">
-                                <i class="bi-quote text-primary"></i>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Eius veniam velit alias laudantium repudiandae nobis esse 
-                                dicta dignissimos voluptatem repellendus earum eos perspiciatis 
-                                aliquid accusamus sint temporibus expedita doloremque quae, 
-                                sed sequi. Earum aut aliquam, enim veniam porro aperiam. Esse.
-                            </p>
+                            <h4 class="fw-bold text-capitalize mt-2 mb-0">Leigh F. Keller</h4>
+                            <p class="text-sm text-muted text-capitalize mb-0">Marketing Manager at EaseTemplate</p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center align-text-top">
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                </div>
+                                <span class="text-warning ms-2">4.5</span>
+                            </div>
                         </div>
+
+                        <p class="text-justify mt-2">
+                            <i class="bi-quote text-primary"></i>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Eius veniam velit alias laudantium repudiandae nobis esse 
+                            dicta dignissimos voluptatem repellendus earum eos perspiciatis 
+                            aliquid accusamus sint temporibus expedita doloremque quae, 
+                            sed sequi. Earum aut aliquam, enim veniam porro aperiam. Esse.
+                        </p>
                     </div>
                     <!-- /.Testimonial -->
 
                     <!-- Testimonial -->
-                    <div class="col-6 col-md-3">
-                        <div class="card card-body rounded-3 shadow-lg border-light testimonial-card bg-blur">
-                            <div class="d-flex justify-content-center flex-column text-center">
-                                <div class="img-wrapper align-self-center">
-                                    <img src="assets/images/user/avatar-3.jpg" alt="Leigh" class="rounded-circle">
-                                </div>
-                                <h4 class="fw-bold text-capitalize mt-2 mb-0">Leigh F. Keller</h4>
-                                <p class="text-sm text-muted text-capitalize mb-0">Marketing Manager at EaseTemplate</p>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <div class="d-flex align-items-center align-text-top">
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                    </div>
-                                    <span class="text-warning ms-2">4.5</span>
-                                </div>
+                    <div class="card card-body rounded-3 shadow-lg border-light testimonial-card swiper-slide bg-blur">
+                        <div class="d-flex justify-content-center flex-column text-center">
+                            <div class="img-wrapper align-self-center">
+                                <img src="assets/images/user/avatar-1.jpg" alt="Leigh" class="rounded-circle">
                             </div>
-
-                            <p class="text-justify mt-2">
-                                <i class="bi-quote text-primary"></i>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Eius veniam velit alias laudantium repudiandae nobis esse 
-                                dicta dignissimos voluptatem repellendus earum eos perspiciatis 
-                                aliquid accusamus sint temporibus expedita doloremque quae, 
-                                sed sequi. Earum aut aliquam, enim veniam porro aperiam. Esse.
-                            </p>
+                            <h4 class="fw-bold text-capitalize mt-2 mb-0">Ron Tregger</h4>
+                            <p class="text-sm text-muted text-capitalize mb-0">Developer at EaseTemplate</p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center align-text-top">
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                </div>
+                                <span class="text-warning ms-2">4.5</span>
+                            </div>
                         </div>
+
+                        <p class="text-justify mt-2">
+                            <i class="bi-quote text-primary"></i>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Eius veniam velit alias laudantium repudiandae nobis esse 
+                            dicta dignissimos voluptatem repellendus earum eos perspiciatis 
+                            aliquid accusamus sint temporibus expedita doloremque quae, 
+                            sed sequi. Earum aut aliquam, enim veniam porro aperiam. Esse.
+                        </p>
                     </div>
                     <!-- /.Testimonial -->
 
                     <!-- Testimonial -->
-                    <div class="col-6 col-md-3">
-                        <div class="card card-body rounded-3 shadow-lg border-light testimonial-card bg-blur">
-                            <div class="d-flex justify-content-center flex-column text-center">
-                                <div class="img-wrapper align-self-center">
-                                    <img src="assets/images/user/avatar-1.jpg" alt="Leigh" class="rounded-circle">
-                                </div>
-                                <h4 class="fw-bold text-capitalize mt-2 mb-0">Ron Tregger</h4>
-                                <p class="text-sm text-muted text-capitalize mb-0">Developer at EaseTemplate</p>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <div class="d-flex align-items-center align-text-top">
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                    </div>
-                                    <span class="text-warning ms-2">4.5</span>
-                                </div>
+                    <div class="card card-body rounded-3 shadow-lg border-light testimonial-card swiper-slide bg-blur">
+                        <div class="d-flex justify-content-center flex-column text-center">
+                            <div class="img-wrapper align-self-center">
+                                <img src="assets/images/user/craig.jpg" alt="Craig" class="rounded-circle">
                             </div>
-
-                            <p class="text-justify mt-2">
-                                <i class="bi-quote text-primary"></i>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Eius veniam velit alias laudantium repudiandae nobis esse 
-                                dicta dignissimos voluptatem repellendus earum eos perspiciatis 
-                                aliquid accusamus sint temporibus expedita doloremque quae, 
-                                sed sequi. Earum aut aliquam, enim veniam porro aperiam. Esse.
-                            </p>
+                            <h4 class="fw-bold text-capitalize mt-2 mb-0">Craig Davis</h4>
+                            <p class="text-sm text-muted text-capitalize mb-0">IT Intern at EaseTemplate</p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center align-text-top">
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                </div>
+                                <span class="text-warning ms-2">4.5</span>
+                            </div>
                         </div>
+
+                        <p class="text-justify mt-2">
+                            <i class="bi-quote text-primary"></i>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Eius veniam velit alias laudantium repudiandae nobis esse 
+                            dicta dignissimos voluptatem repellendus earum eos perspiciatis 
+                            aliquid accusamus sint temporibus expedita doloremque quae, 
+                            sed sequi. Earum aut aliquam, enim veniam porro aperiam. Esse.
+                        </p>
                     </div>
                     <!-- /.Testimonial -->
 
                     <!-- Testimonial -->
-                    <div class="col-6 col-md-3">
-                        <div class="card card-body rounded-3 shadow-lg border-light testimonial-card bg-blur">
-                            <div class="d-flex justify-content-center flex-column text-center">
-                                <div class="img-wrapper align-self-center">
-                                    <img src="assets/images/user/craig.jpg" alt="Craig" class="rounded-circle">
-                                </div>
-                                <h4 class="fw-bold text-capitalize mt-2 mb-0">Craig Davis</h4>
-                                <p class="text-sm text-muted text-capitalize mb-0">IT Intern at EaseTemplate</p>
-                                <div class="d-flex align-items-center justify-content-center">
-                                    <div class="d-flex align-items-center align-text-top">
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                        <i class="bi-star-fill text-warning"></i>
-                                    </div>
-                                    <span class="text-warning ms-2">4.5</span>
-                                </div>
+                    <div class="card card-body rounded-3 shadow-lg border-light testimonial-card swiper-slide bg-blur">
+                        <div class="d-flex justify-content-center flex-column text-center">
+                            <div class="img-wrapper align-self-center">
+                                <img src="assets/images/user/bianca.jpg" alt="Bianca" class="rounded-circle">
                             </div>
-
-                            <p class="text-justify mt-2">
-                                <i class="bi-quote text-primary"></i>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-                                Eius veniam velit alias laudantium repudiandae nobis esse 
-                                dicta dignissimos voluptatem repellendus earum eos perspiciatis 
-                                aliquid accusamus sint temporibus expedita doloremque quae, 
-                                sed sequi. Earum aut aliquam, enim veniam porro aperiam. Esse.
-                            </p>
+                            <h4 class="fw-bold text-capitalize mt-2 mb-0">Gladys Colbert</h4>
+                            <p class="text-sm text-muted text-capitalize mb-0">Web developer at EaseTemplate</p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center align-text-top">
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                </div>
+                                <span class="text-warning ms-2">4.5</span>
+                            </div>
                         </div>
+
+                        <p class="text-justify mt-2">
+                            <i class="bi-quote text-primary"></i>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Eius veniam velit alias laudantium repudiandae nobis esse 
+                            dicta dignissimos voluptatem repellendus earum eos perspiciatis 
+                            aliquid accusamus sint temporibus expedita doloremque quae, 
+                            sed sequi. Earum aut aliquam, enim veniam porro aperiam. Esse.
+                        </p>
+                    </div>
+                    <!-- /.Testimonial -->
+
+                     <!-- Testimonial -->
+                    <div class="card card-body rounded-3 shadow-lg border-light testimonial-card swiper-slide bg-blur">
+                        <div class="d-flex justify-content-center flex-column text-center">
+                            <div class="img-wrapper align-self-center">
+                                <img src="assets/images/user/avatar-1.jpg" alt="Leigh" class="rounded-circle">
+                            </div>
+                            <h4 class="fw-bold text-capitalize mt-2 mb-0">Ron Tregger</h4>
+                            <p class="text-sm text-muted text-capitalize mb-0">Developer at EaseTemplate</p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center align-text-top">
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                </div>
+                                <span class="text-warning ms-2">4.5</span>
+                            </div>
+                        </div>
+
+                        <p class="text-justify mt-2">
+                            <i class="bi-quote text-primary"></i>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Eius veniam velit alias laudantium repudiandae nobis esse 
+                            dicta dignissimos voluptatem repellendus earum eos perspiciatis 
+                            aliquid accusamus sint temporibus expedita doloremque quae, 
+                            sed sequi. Earum aut aliquam, enim veniam porro aperiam. Esse.
+                        </p>
+                    </div>
+                    <!-- /.Testimonial -->
+
+                    <!-- Testimonial -->
+                    <div class="card card-body rounded-3 shadow-lg border-light testimonial-card swiper-slide bg-blur">
+                        <div class="d-flex justify-content-center flex-column text-center">
+                            <div class="img-wrapper align-self-center">
+                                <img src="assets/images/user/craig.jpg" alt="Craig" class="rounded-circle">
+                            </div>
+                            <h4 class="fw-bold text-capitalize mt-2 mb-0">Craig Davis</h4>
+                            <p class="text-sm text-muted text-capitalize mb-0">IT Intern at EaseTemplate</p>
+                            <div class="d-flex align-items-center justify-content-center">
+                                <div class="d-flex align-items-center align-text-top">
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                    <i class="bi-star-fill text-warning"></i>
+                                </div>
+                                <span class="text-warning ms-2">4.5</span>
+                            </div>
+                        </div>
+
+                        <p class="text-justify mt-2">
+                            <i class="bi-quote text-primary"></i>
+                            Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+                            Eius veniam velit alias laudantium repudiandae nobis esse 
+                            dicta dignissimos voluptatem repellendus earum eos perspiciatis 
+                            aliquid accusamus sint temporibus expedita doloremque quae, 
+                            sed sequi. Earum aut aliquam, enim veniam porro aperiam. Esse.
+                        </p>
                     </div>
                     <!-- /.Testimonial -->
                 </div>
                 <!-- /.Testimonials -->
+
+                <!-- Pagination Links -->
+                <div class="swiper-pagination"></div>
+
+                <!-- Navigation buttons -->
+                <div class="swiper-slide-button swiper-button-prev"></div>
+                <div class="swiper-slide-button swiper-button-next"></div>
             </div>
         </section>
         <!-- /.Testimonial Section -->
@@ -1908,6 +1988,9 @@
     <!-- Bootstrap JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script> 
 
+    <!-- Swiper Slider JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
     <!-- Core JS -->
     <script src="assets/js/app.js"></script>
 
@@ -1947,6 +2030,86 @@
             // Show business hours
             checkBusinessStatus();
             populateDropdown();
+
+            // Swiper Slider for testimonials
+            new Swiper('.swiper-testimonials', {
+                // Looping
+                loop: true,
+                spaceBetween: 30,
+                speed: 400,
+                autoplay: {
+                    delay: 5000
+                },
+                direction: 'horizontal',
+              
+                // Pagination bullets
+                pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+                  dynamicBullets: true
+                },
+              
+                // Navigation arrows
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+
+                // Responsive breakpoints
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1
+                    },
+                    768: {
+                        slidesPerView: 2
+                    },
+                    1024: {
+                        slidesPerView: 3
+                    },
+                    1200: {
+                        slidesPerView: 4
+                    }
+                }
+            });
+
+            // Swiper Slider for testimonials
+            new Swiper('.course-content', {
+                // Looping
+                loop: false,
+                spaceBetween: 30,
+                speed: 400,
+                autoplay: false,
+                direction: 'horizontal',
+              
+                // Pagination bullets
+                pagination: {
+                  el: '.swiper-pagination',
+                  clickable: true,
+                  dynamicBullets: true
+                },
+              
+                // Navigation arrows
+                navigation: {
+                  nextEl: '.swiper-button-next',
+                  prevEl: '.swiper-button-prev',
+                },
+
+                // Responsive breakpoints
+                breakpoints: {
+                    0: {
+                        slidesPerView: 1
+                    },
+                    768: {
+                        slidesPerView: 2
+                    },
+                    1024: {
+                        slidesPerView: 3
+                    },
+                    1200: {
+                        slidesPerView: 4
+                    }
+                }
+            });
         });
     </script>
 </body>
