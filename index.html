@@ -117,7 +117,16 @@
                     directionsService.route(request, (result, status) => {
                         businessMarker(businessLocation);
                         if (status === 'OK') {
+                            console.log(result);
+
                             directionsRenderer.setDirections(result);
+                            var route = result.routes[0].overview_path;
+                            var distance = result.routes[0].legs[0].distance.text;
+                            var duration = result.routes[0].legs[0].duration.text;
+                            
+                            // Display the distance and the duration on the map
+                            document.getElementById('time-value').innerHTML = duration;
+                            document.getElementById('distance-value').innerHTML = `(${distance})`;
                             carMarker(userLocation);
                         } else {
                             console.log('Directions request failed due to ' + status);
@@ -1654,7 +1663,7 @@
 
                                 <div class="d-block">
                                     <!-- Phone Actions -->
-                                    <div class="d-flex align-items-center">
+                                    <div class="d-flex align-items-center justify-content-end">
                                         <a href="tel:+263776021140" id="call-button" class="btn btn-primary rounded-pill btn-sm btn-icon me-3">
                                             <i class="bi-telephone-inbound me-2"></i> Call
                                         </a>
@@ -1682,13 +1691,20 @@
                                 <!-- Physical Address -->
                                 <div class="d-flex align-items-center mt-1">
                                     <span class="fw-bold">Address: </span>
-                                    <span class="ms-2">2 Thornpark Drive, Marlborough, Zimbabwe</span>
+                                    <span class="d-flex align-items-center ms-2">
+                                        2 Thornpark Drive, Marlborough, Zimbabwe
+                                        <i class="bi-dot fs-2 mx-2"></i>
+                                        <span class="mx-2">
+                                            <span id="time-value" class="text-success"></span>
+                                            <span id="distance-value" class="text-muted"></span>
+                                        </span>
+                                    </span>
                                 </div>
                                 <!-- /.Physical Address -->
                             </div>
                             <div class="d-block">
                                 <!-- Cell -->
-                                <div class="d-flex align-items-center mt-1">
+                                <div class="d-flex align-items-center mb-2">
                                     <span class="fw-bold">Cell: </span>
                                     <span class="ms-2">+263776021140</span>
                                 </div>
@@ -1696,7 +1712,7 @@
                             </div>
                             <div class="d-block">
                                 <!-- Email Address -->
-                                <div class="d-flex align-items-center mt-1">
+                                <div class="d-flex align-items-center">
                                     <span class="fw-bold">Email: </span>
                                     <span class="ms-2">marshallchaterera@gmail.com</span>
                                 </div>
@@ -2025,7 +2041,7 @@
             setInterval(changeCourse, 1500); 
 
             // Animate numbers when in viewport
-            animateNumbers
+            animateNumbers();
 
             // Show business hours
             checkBusinessStatus();
