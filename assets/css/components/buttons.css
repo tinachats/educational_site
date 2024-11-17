@@ -78,10 +78,50 @@
 }
 
 .btn-transparent {
-    background-color: transparent;
-    border: none;
-    border-color: transparent;
+    background-color: transparent !important;
+    border-color: transparent !important;
 }
+
+
+.btn-scroll-top {
+    position: fixed;
+    height: 3rem;
+    width: 3rem;
+    border-width: 3px;
+    border-style: solid;
+    border-color: transparent;
+    --border-gradient: conic-gradient(
+        from -45deg at 50% 50%, 
+        var(--purple), var(--purple), var(--purple), var(--purple), 
+        transparent 25%, transparent 75%
+    );
+    border-radius: 10px;
+    bottom: 1.5rem;
+    right: 1.5rem;
+    opacity: 0;
+    overflow: hidden;
+    visibility: hidden;
+    transition: opacity 0.3s, visibility 0.3s;
+    z-index: 1010;
+}
+
+.btn-scroll-top::after {
+    position: absolute;
+    content: '';
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 3px solid transparent;
+    box-sizing: border-box;
+    border-image: var(--border-gradient);
+    border-image-slice: 1;
+}
+
+.btn-scroll-top.show { 
+    opacity: 1; 
+    visibility: visible; 
+} 
 
 .footer .btn-icon {
     align-items: center;

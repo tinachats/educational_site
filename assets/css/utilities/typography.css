@@ -68,7 +68,7 @@ label {
     font-weight: 600;
 }
 
-.text-gradient {
+.text-linear-gradient {
     background: var(--text-linear-gradient);
     background-size: 300% 100%;
     background-clip: text;

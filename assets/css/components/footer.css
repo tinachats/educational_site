@@ -24,36 +24,4 @@
     color: #64748b;
 }
 
-@media (min-width: 320px) {
-    .btn-scroll-top.active-progress {
-        opacity: 1;
-    }
-}
-.btn-scroll-top.active-progress {
-    transform: translateY(0);
-    visibility: visible;
-}
-.btn-scroll-top, .btn-scroll-top:after {
-    cursor: pointer;
-    display: block;
-    height: 3rem;
-    width: 3rem;
-}
-.btn-scroll-top {
-    border-radius: 10px;
-    bottom: 1.5rem;
-    box-shadow: inset 0 0 0 .1rem rgba(227, 229, 233, .25);
-    opacity: 0;
-    position: fixed;
-    right: 1.5rem;
-    transform: translateY(.75rem);
-    transition: all .2s linear, margin-right 0s;
-    visibility: hidden;
-    z-index: 1010;
-}
-
-svg {
-    touch-action: none;
-    vertical-align: middle;
-}
 

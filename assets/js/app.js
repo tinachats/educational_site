@@ -148,5 +148,55 @@ function populateDropdown() {
     });
 }
 
+// Scroll-to-Top button
+document.addEventListener('DOMContentLoaded', function() {
+  const btnScrollTop = document.getElementById('btn-scroll-top');
+  const ScrollUpIcon = document.querySelector('.bi-arrow-up');
+  const rootElement = document.documentElement;
+
+  function handleScroll() {
+      const scrollTotal = rootElement.scrollHeight - rootElement.clientHeight;
+      const scrollFraction = rootElement.scrollTop / scrollTotal;
+      const scrollDegrees = scrollFraction * 360;
+
+      // Define a gradient of the border
+      const gradient = `conic-gradient(from -45deg at 50% 50%,
+        purple ${scrollDegrees}deg, 
+        transparent ${scrollDegrees}deg)
+      `;
+
+      // Update the border
+      btnScrollTop.style.setProperty('--border-gradient', gradient);
+
+      // If near the bottom, change the color of the scroll up icon
+      if (scrollDegrees >= 320) {
+        ScrollUpIcon.style.color = '#8c007c';
+      } else {
+        ScrollUpIcon.style.color = '#c1c1c1';
+      }
+
+      if (rootElement.scrollTop > rootElement.clientHeight) {
+          // Show button
+          btnScrollTop.classList.add('show');
+      } else {
+          // Hide button
+          btnScrollTop.classList.remove('show');
+      }
+  }
+
+  function scrollToTop() {
+    rootElement.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  }
+
+  btnScrollTop.addEventListener('click', scrollToTop);
+  document.addEventListener('scroll', handleScroll);
+});
+
+
+
+
 
 

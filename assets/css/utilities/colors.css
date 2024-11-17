@@ -59,3 +59,7 @@
     opacity: 1;
     border-color: #1e293b !important;
 }
+
+.bg-transparent {
+    background-color: transparent;
+}
