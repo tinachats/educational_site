@@ -91,8 +91,12 @@
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
                 center: businessLocation,
-                zoom: 14
+                zoom: 8
             });
+
+            // Fetch traffic status
+            const trafficLayer = new google.maps.TrafficLayer();
+            // trafficLayer.setMap(map);
 
             var directionsService = new google.maps.DirectionsService();
             var directionsRenderer = new google.maps.DirectionsRenderer();
@@ -106,7 +110,10 @@
                         lng: position.coords.longitude
                     };
 
-                    const destination = businessLocation; 
+                    const destination = businessLocation;
+
+                    // Show weather info
+                    fetchWeatherData(userLocation.lat, userLocation.lng);
                     
                     const request = {
                         origin: userLocation,
@@ -117,9 +124,12 @@
                     directionsService.route(request, (result, status) => {
                         businessMarker(businessLocation);
                         if (status === 'OK') {
-                            console.log(result);
-
                             directionsRenderer.setDirections(result);
+
+                            // Traffic status
+                            const leg = result.routes[0].legs[0]; 
+                            displayTrafficStatus(leg);
+
                             var route = result.routes[0].overview_path;
                             var distance = result.routes[0].legs[0].distance.text;
                             var duration = result.routes[0].legs[0].duration.text;
@@ -169,6 +179,38 @@
                     scaledSize: new google.maps.Size(100, 100)
                 }
             });
+        }
+
+        function fetchWeatherData(lat, lng) { 
+            const apiKey = '81e4fbc2784f748f7cafda1f57880aea'; 
+            const apiUrl = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lng}&units=metric&appid=${apiKey}`;
+            
+            fetch(apiUrl)
+            .then(response => response.json())
+            .then(data => {
+                let temp = Math.round(data.main.temp);
+                let weatherIcon = data.weather[0].icon;
+                let weatherDescription = data.weather[0].description;
+                document.getElementById('temp-value').innerHTML = `${temp}<sup>°</sup>C`;
+                document.getElementById('weather-description').innerHTML = weatherDescription;
+                document.getElementById('weather-icon').src = `assets/images/weather-icons/${weatherIcon}.svg`;
+            });
+        }
+
+        function displayTrafficStatus(leg) { 
+            let trafficStatus = 'Normal Traffic'; 
+            let trafficStatusElement = document.getElementById('traffic-status');
+
+            const durationInTraffic = leg.duration_in_traffic ? leg.duration_in_traffic.value : leg.duration.value; 
+            const trafficDifference = durationInTraffic - leg.duration.value; 
+            if (trafficDifference > 0 && trafficDifference <= 600) { 
+                trafficStatus = 'Moderate Traffic'; 
+                trafficStatusElement.style.color = 'green';
+            } else if (trafficDifference > 600) { 
+                trafficStatus = 'Heavy Traffic'; 
+                trafficStatusElement.style.color = 'red';
+            } 
+            trafficStatusElement.innerText = trafficStatus;
         }
     </script>
 </head>
@@ -1635,12 +1677,6 @@
                 <div class="row g-4 my-5">
                     <!-- Location -->
                     <div class="col">
-                        <div class="map-wrapper shadow-lg border-light position-relative">
-                            <!-- The div element for the map -->
-                            <div id="map"></div>
-                            <!-- /.The div element for the map -->
-                        </div>
-
                         <!-- Location Address -->
                         <div class="card card-body rounded-3 shadow-lg my-3">
                             <div class="d-flex align-items-start justify-content-between">
@@ -1687,39 +1723,68 @@
                                 </div>
                             </div>
                             <hr>
-                            <div class="d-block">
-                                <!-- Physical Address -->
-                                <div class="d-flex align-items-center mt-1">
-                                    <span class="fw-bold">Address: </span>
-                                    <span class="d-flex align-items-center ms-2">
-                                        2 Thornpark Drive, Marlborough, Zimbabwe
-                                        <i class="bi-dot fs-2 mx-2"></i>
-                                        <span class="mx-2">
-                                            <span id="time-value" class="text-success"></span>
-                                            <span id="distance-value" class="text-muted"></span>
-                                        </span>
-                                    </span>
+                            <div class="row">
+                                <div class="col-12 mb-2">
+                                    <div class="d-block">
+                                        <!-- Physical Address -->
+                                        <div class="d-flex align-items-center">
+                                            <span class="fw-bold">Address: </span>
+                                            <span class="ms-2">
+                                                2 Thornpark Drive, Marlborough, Zimbabwe
+                                            </span>
+                                        </div>
+                                        <!-- /.Physical Address -->
+                                    </div>
+                                    <div class="d-block mt-1">
+                                        <!-- Cell -->
+                                        <div class="d-flex align-items-center">
+                                            <span class="fw-bold">Cell: </span>
+                                            <span class="ms-2">+263776021140</span>
+                                        </div>
+                                        <!-- /.Cell -->
+                                    </div>
+                                    <div class="d-block mt-1">
+                                        <!-- Email Address -->
+                                        <div class="d-flex align-items-center">
+                                            <span class="fw-bold">Email: </span>
+                                            <span class="ms-2">marshallchaterera@gmail.com</span>
+                                        </div>
+                                        <!-- /.Email Address -->
+                                    </div>
                                 </div>
-                                <!-- /.Physical Address -->
-                            </div>
-                            <div class="d-block">
-                                <!-- Cell -->
-                                <div class="d-flex align-items-center mb-2">
-                                    <span class="fw-bold">Cell: </span>
-                                    <span class="ms-2">+263776021140</span>
+
+                                <div class="col-12 border-top pt-2">
+                                    <div class="d-flex align-items-center justify-content-between">
+                                        <div class="d-block text-center">
+                                            <!-- Distance Info -->
+                                            <h6>
+                                               <span id="time-value" class="text-success"></span>
+                                               <span id="distance-value" class="text-muted"></span>
+                                           </h6>
+                                           <!-- /.Distance Info -->
+                                           <small id="traffic-status"></small>
+                                       </div>
+                                       
+                                       <!-- Weather Info -->
+                                       <div class="d-block text-center">
+                                           <div class="d-flex align-items-center">
+                                              <h6 class="fw-bold lead my-0" id="temp-value"></h6>
+                                              <img src="assets/images/weather-icons/03n.svg" id="weather-icon" alt="Weather Icon" height="40" width="40">
+                                           </div>
+                                           <small class="text-muted text-capitalize" id="weather-description"></small>
+                                       </div>
+                                       <!-- /.Weather Info -->
+                                    </div>
                                 </div>
-                                <!-- /.Cell -->
-                            </div>
-                            <div class="d-block">
-                                <!-- Email Address -->
-                                <div class="d-flex align-items-center">
-                                    <span class="fw-bold">Email: </span>
-                                    <span class="ms-2">marshallchaterera@gmail.com</span>
-                                </div>
-                                <!-- /.Email Address -->
                             </div>
                         </div>
                         <!-- /.Location Address -->
+
+                        <div class="map-wrapper shadow-lg border-light position-relative">
+                            <!-- The div element for the map -->
+                            <div id="map"></div>
+                            <!-- /.The div element for the map -->
+                        </div>
                     </div>
                     <!-- /.Location -->
 
@@ -2021,14 +2086,14 @@
         
             // Loop over them and prevent submission
             Array.from(forms).forEach(form => {
-            form.addEventListener('submit', event => {
-                if (!form.checkValidity()) {
-                event.preventDefault()
-                event.stopPropagation()
-                }
-        
-                form.classList.add('was-validated')
-            }, false)
+                form.addEventListener('submit', event => {
+                    if (!form.checkValidity()) {
+                    event.preventDefault()
+                    event.stopPropagation()
+                    }
+            
+                    form.classList.add('was-validated')
+                }, false)
             })
         })();
 
