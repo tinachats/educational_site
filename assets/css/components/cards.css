@@ -6,7 +6,7 @@
 
 .card-title>a,
 .text-truncate-line-2>a {
-    color: var(--purple);
+    color: var(--app-color);
     text-decoration: none !important;
     text-transform: capitalize;
 }

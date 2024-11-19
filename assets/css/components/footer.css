@@ -9,7 +9,7 @@
 }
 
 .nav-footer .nav-link:hover {
-    color: var(--purple);
+    color: var(--app-color);
 }
 .nav-x-0 .nav-link {
     padding-left: 0 !important;

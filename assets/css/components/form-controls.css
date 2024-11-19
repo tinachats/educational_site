@@ -1,14 +1,29 @@
 .form-check .form-check-input {
-    border-color: var(--purple);
+    border-color: var(--app-color);
 }
 
 .form-check-input:checked {
-    background-color: var(--purple);
-    border-color: var(--purple);
+    background-color: var(--app-color);
+    border-color: var(--app-color);
 }
 
 .form-check-input:focus,
 .form-control:focus {
-    border-color: var(--purple);
+    border-color: var(--app-color);
     box-shadow: 0 0 0 .25rem rgba(120, 56, 123, 0.25);
+}
+
+.form-check .form-check-input {
+    --bs-form-switch-bg: url('../../images/app/off-switch-button.svg') !important;
+    background-image: var(--bs-form-switch-bg) !important;
+}
+
+.form-check .form-check-input:checked {
+    --bs-form-switch-bg: url('../../images/app/on-switch-button.svg') !important;
+    background-image: var(--bs-form-switch-bg) !important;
+}
+
+.form-check>.form-check-label {
+    font-size: inherit !important;
+    font-weight: inherit !important;
 }

@@ -92,7 +92,7 @@
     border-color: transparent;
     --border-gradient: conic-gradient(
         from -45deg at 50% 50%, 
-        var(--purple), var(--purple), var(--purple), var(--purple), 
+        var(--app-color), var(--app-color), var(--app-color), var(--app-color), 
         transparent 25%, transparent 75%
     );
     border-radius: 10px;
@@ -134,4 +134,26 @@
     padding: 0;
     position: relative;
     width: 2.5rem;
+}
+
+.btn-icon-circle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: transparent;
+    color: var(--black);
+    font-size: 1.75rem;
+    font-weight: bold;
+    padding: 0;
+    line-height: 0;
+}
+
+.btn-icon-circle:hover {
+    background-color: var(--light-app-color);
+    color: var(--app-color);
+    transition: background-color 0.3s ease-in-out;
 }

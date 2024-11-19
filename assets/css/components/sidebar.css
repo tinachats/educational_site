@@ -1,0 +1,57 @@
+.sidebar-menu {
+    width: 300px !important;
+}
+
+.sidebar-menu>.offcanvas-header {
+    position: relative;
+    box-sizing: border-box;
+    height: 60px;
+}
+
+.sidebar-menu>.offcanvas-body>.list {
+    position: relative;
+    list-style: none;
+    padding-left: 0;
+}
+
+.sidebar-menu>.offcanvas-body>.list>.list-item {
+    text-decoration: none;
+    margin: 0.5rem 0;
+    padding: 0.5rem 0 0.5rem 0.75rem;
+    border-radius: 0.5rem;
+    width: 100%;
+}
+
+.sidebar-menu>.offcanvas-body>.list>.list-item,
+.sidebar-menu>.offcanvas-body>.list>.list-item>a {
+    background-color: transparent;
+}
+
+.sidebar-menu>.offcanvas-footer>.list {
+    margin-left: 0;
+}
+
+.sidebar-menu>.offcanvas-body>.list>.list-item:not(.clear):hover {
+    background: var(--linear-gradient);
+    box-shadow: var(--purple-shadow);
+    transition: 0.3s ease-in-out;
+}
+
+.sidebar-menu>.offcanvas-body>.list>.list-item:not(.clear):hover>a,
+.sidebar-menu>.offcanvas-body>.list>.list-item:not(.clear):hover label {
+    color: #fff;
+} 
+
+.sidebar-menu>.offcanvas-body>.list>.list-item>a {
+    color: var(--dark);
+}
+
+.sidebar-menu>.offcanvas-footer>.profile-wrapper {
+    background: var(--linear-gradient);
+    padding: 0.3rem;
+    color: #fff;
+}
+
+.sidebar-menu>.offcanvas-footer>.profile-wrapper img {
+    border: 3px solid var(--white);
+}

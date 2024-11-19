@@ -15,12 +15,12 @@
     text-decoration: none;
     background-color: #37465b;
     border-radius: 5px;
-    color: var(--purple);
+    color: var(--app-color);
 }
 
 
 .dropdown-item.active, 
 .dropdown-item:active {
-    color: var(--purple);
+    color: var(--app-color);
 }
 

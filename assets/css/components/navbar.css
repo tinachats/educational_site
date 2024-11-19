@@ -1,8 +1,19 @@
 @import url('../utilities/colors.css');
+@import url('../utilities/spacing.css');
+@import url('../utilities/typography.css');
+@import url('buttons.css');
 @import url('dropdown.css');
+@import url('form-controls.css');
+@import url('sidebar.css');
 
-.navbar {
+/* Main Nav */
+.navbar.main-nav {
+    height: 60px;
     font-size: var(--text-sm);
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
 .navbar .navbar-brand{
@@ -14,11 +25,50 @@
     font-size: 1.75rem;
     font-weight: 700;
     margin-bottom: 0;
+    padding-bottom: 0;
 }
 
 .navbar .btn {
     font-size: var(--text-sm);
 }
+/* /.Main Nav */
+
+/* Nav Scroller */
+.nav-scroller {
+    position: relative;
+    z-index: 2;
+    height: 2.75rem;
+    overflow-y: hidden;
+}
+
+.nav-scroller .nav {
+    color: rgba(255, 255, 255, .75);
+}
+.nav-scroller .nav {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: nowrap;
+    padding-bottom: 1rem;
+    margin-top: -1px;
+    overflow-x: auto;
+    text-align: center;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+}
+
+.nav-scroller .nav-link {
+    padding-top: .75rem;
+    padding-bottom: .75rem;
+    font-weight: 500;
+    font-size: .875rem;
+    color: var(--text-muted);
+}
+
+.nav-scroller .nav-link.active,
+.nav-scroller .nav-link:hover {
+    color: var(--app-color) !important;
+}
+/* /.Nav Scroller */
 
 /* Color Gradient Preloader */
 
@@ -35,13 +85,13 @@
     width: 100%;
     height: inherit;
     background: var(--text-linear-gradient);
-    animation: slide 2s ease-in-out infinite;
+    animation: slide 1s ease-in-out infinite;
 }
 
 @keyframes slide {
     0% {
         transform-origin: left;
-        transform: scalex(0.3);
+        transform: scalex(0.5);
     }
     25% {
         transform-origin: left;
@@ -53,7 +103,7 @@
     }
     50% {
         transform-origin: right;
-        transform: scalex(0.3);
+        transform: scalex(0.5);
     }
     75% {
         transform-origin: right;
@@ -65,7 +115,7 @@
     }
     100% {
         transform-origin: left;
-        transform: scalex(0.3);
+        transform: scalex(0.5);
     }
 }
 
@@ -90,9 +140,9 @@
 
 .nav-tabs .nav-item .nav-link.active {
     background-color: transparent;
-    border-bottom: 5px solid var(--purple);
+    border-bottom: 5px solid var(--app-color);
     border-radius: 10px 10px 0 0; /* Rounded top edges */ 
-    color: var(--purple); 
+    color: var(--app-color); 
 }
 
 .nav-tabs.clear {
@@ -105,4 +155,9 @@
 
 
 /* /.Navs */
+
+/* Medium devices (tablets, 768px and down) */
+@media screen and (max-width: 768px) {
+
+}
 

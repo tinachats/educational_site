@@ -202,8 +202,8 @@
         }
 
         function displayTrafficStatus(leg) { 
-            let statusColor = 'text-success';
-            let trafficStatus = 'Normal Traffic';
+            let statusColor = 'text-muted';
+            let trafficStatus = 'No connecting route!';
             const lightTrafficThreshold = 1200; // 20 minutes 
             const moderateTrafficThreshold = 1800; // 30 minutes
             const durationInTraffic = leg.duration.value; // Duration in seconds
@@ -237,11 +237,14 @@
         <!-- Page Header -->
         <header class="header" id="header-section">
             <!-- Navbar -->
-            <nav class="navbar navbar-expand-lg bg-body-tertiary shadow-sm border-bottom">
+            <nav class="navbar main-nav navbar-expand-lg bg-body-tertiary border-bottom">
                 <div class="container">
+                    <a class="btn-icon-circle fw-bold mt-2 me-3"  data-bs-toggle="offcanvas" href="#sidebar-menu" role="button" aria-controls="sidebar-menu">
+                        <i class="bi-list"></i>
+                    </a>
                     <a class="navbar-brand app-logo" href="/">
                         <img src="assets/images/app/dr-tinaking-icon-logo.png" alt="Dr. TinaKing logo" width="33" height="30">
-                        TinaKing
+                        <span class="d-none d-md-inline-block">TinaKing</span>
                     </a>
                     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
@@ -271,6 +274,51 @@
                 </div>
             </nav>
             <!-- /.Navbar -->
+
+            <!-- Subjects Nav Scroller -->
+            <div class="nav-scroller bg-body-tertiary shadow-sm border-bottom">
+                <div class="container">
+                    <nav class="nav" aria-label="Secondary navigation">
+                        <a class="nav-link active" href="#">
+                            <small class="text-capitalize">Math</small>
+                        </a>
+                        <a class="nav-link" href="#">
+                            <small class="text-capitalize">Physics</small>
+                        </a>
+                        <a class="nav-link" href="#">
+                            <small class="text-capitalize">Computer Science</small>
+                        </a>
+                        <a class="nav-link" href="#">
+                            <small class="text-capitalize">Design & Technology</small>
+                        </a>
+                        <a class="nav-link" href="#">
+                            <small class="text-capitalize">IT</small>
+                        </a>
+                        <a class="nav-link" href="#">
+                            <small class="text-capitalize">ICT</small>
+                        </a>
+                        <a class="nav-link" href="#">
+                            <small class="text-capitalize">CAD</small>
+                        </a>
+                        <a class="nav-link" href="#">
+                            <small class="text-capitalize">Graphics Design</small>
+                        </a>
+                        <a class="nav-link" href="#">
+                            <small class="text-capitalize">Web Development</small>
+                        </a>
+                        <a class="nav-link" href="#">
+                            <small class="text-capitalize">Simulations</small>
+                        </a>
+                        <a class="nav-link" href="#">
+                            <small class="text-capitalize">Robotics</small>
+                        </a>
+                        <a class="nav-link" href="#">
+                            <small class="text-capitalize">3D Printing</small>
+                        </a>
+                    </nav>
+                </div>
+            </div>
+            <!-- /.Subjects Nav Scroller -->
                 
             <!-- Hero Section -->
             <section class="hero-section">
@@ -1915,6 +1963,100 @@
         </section>
         <!-- /.Contact Us -->
     </main>
+
+    <!-- Side Menu -->
+    <div class="sidebar-menu offcanvas offcanvas-start show" tabindex="-1" id="sidebar-menu" aria-labelledby="sidebar-menu-label">
+        <div class="offcanvas-header py-0">
+            <a class="navbar-brand app-logo" href="/">
+                <img src="assets/images/app/dr-tinaking-icon-logo.png" alt="Dr. TinaKing logo" width="33" height="30">
+                TinaKing
+            </a>
+        </div>
+        <hr class="my-0 py-0">
+        <div class="offcanvas-body pt-0">
+            <ul class="list">
+                <li class="list-item">
+                    <a href="/register.html">
+                        <i class="bi-person me-3"></i> Create an account
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/dashboard.html">
+                        <i class="bi-grid me-3"></i> Dashboard
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/calendar.html">
+                        <i class="bi-calendar4-week me-3"></i> My Timetable
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/courses.html">
+                        <i class="bi-journals me-3"></i> My Courses
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/leaderboard.html">
+                        <i class="bi bi-bar-chart-steps me-3"></i> Leaderboard
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/awards.html">
+                        <i class="bi-trophy me-3"></i> Awards
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/wishlist.html">
+                        <i class="bi-journal-bookmark me-3"></i> Wishlist
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/purchases.html">
+                        <i class="bi-cart2 me-3"></i> Purchases
+                    </a>
+                </li>
+            </ul>
+            <hr>
+            <ul class="list">
+                <li class="list-item">
+                    <a href="/calendar.html">
+                        <i class="bi-chat me-3"></i> Chat
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/courses.html">
+                        <i class="bi-gear me-3"></i> Settings
+                    </a>
+                </li>
+                <li class="list-item">
+                    <a href="/logout.html">
+                        <i class="bi-power me-3"></i> Logout
+                    </a>
+                </li>
+                <li class="list-item clear">
+                    <div class="d-flex align-items-center">
+                        <i class="bi-brightness-high me-3"></i> 
+                        <div class="form-check form-switch">
+                            <input class="form-check-input" type="checkbox" role="switch" id="theme-change">
+                            <label class="form-check-label" for="theme-change">
+                                <i class="bi-moon ms-2"></i> 
+                            </label>
+                        </div>       
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="offcanvas-footer mt-auto">
+            <div class="profile-wrapper d-flex align-items-center justify-content-center">
+                <img src="assets/images/user/tinaking.png" alt="Avatar" class="rounded-circle object-fit-cover" height="50" width="50">
+                <div class="d-block ms-2">
+                    <h4 class="text-capitalize mb-0 pb-0">tinashe chaterera</h4>
+                    <small class="mt-0 pt-0">tinashe@dr-tinaking.com</small>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- /.Side Menu -->
 
     <!-- Footer -->
     <footer class="footer border-top border-light bg-dark-stable py-8 mt-auto">
