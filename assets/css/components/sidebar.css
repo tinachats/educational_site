@@ -12,6 +12,7 @@
     position: relative;
     list-style: none;
     padding-left: 0;
+    width: 100%;
 }
 
 .sidebar-menu>.offcanvas-body>.list>.list-item {
@@ -40,6 +41,16 @@
 .sidebar-menu>.offcanvas-body>.list>.list-item:not(.clear):hover>a,
 .sidebar-menu>.offcanvas-body>.list>.list-item:not(.clear):hover label {
     color: #fff;
+} 
+
+.sidebar-menu>.offcanvas-body>.list>.list-item>span.badge{
+    background: var(--linear-gradient);
+    color: #fff;
+}
+
+.sidebar-menu>.offcanvas-body>.list>.list-item:hover>span.badge{
+    background: transparent !important;
+    transition: 0.1s ease-in;
 } 
 
 .sidebar-menu>.offcanvas-body>.list>.list-item>a {

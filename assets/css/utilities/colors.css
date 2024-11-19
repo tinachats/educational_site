@@ -41,6 +41,10 @@
     color: #0ea5e9 !important;
 }
 
+.bg-primary {
+    background-color: var(--app-color) !important;
+}
+
 .bg-success-soft {
     background-color: rgba(56, 161, 105, .1) !important;
     color: #38a169 !important;

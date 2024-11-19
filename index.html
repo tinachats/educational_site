@@ -92,7 +92,7 @@
         function initMap() {
             map = new google.maps.Map(document.getElementById('map'), {
                 center: businessLocation,
-                zoom: 8
+                zoom: 12
             });
 
             // Fetch traffic status
@@ -240,7 +240,7 @@
             <nav class="navbar main-nav navbar-expand-lg bg-body-tertiary border-bottom">
                 <div class="container">
                     <!-- Toggle Side Menu Button -->
-                    <div class="d-inline-flex d-md-none">
+                    <div class="d-inline-flex">
                         <a class="btn-icon-circle fw-bold mt-2 me-3"  data-bs-toggle="offcanvas" href="#sidebar-menu" role="button" aria-controls="sidebar-menu">
                             <i class="bi-list"></i>
                         </a>
@@ -257,17 +257,17 @@
                     <!-- Left-Side Nav Elements -->
                     <ul class="d-none d-md-inline-flex navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
-                            <a class="nav-link" href="#">About</a>
+                            <a class="nav-link" href="about.html">About</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#">Contact Us</a>
+                            <a class="nav-link" href="#contact-us">Contact Us</a>
                         </li>
                     </ul>
                     <!-- /.Left-Side Nav Elements -->
 
                     <!-- Search Form -->
                     <form class="search-form d-md-flex d-none position-relative me-3" role="search">
-                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <input class="form-control text-sm me-2" type="search" placeholder="Search" aria-label="Search">
                         <i class="bi-search search-icon"></i>
                     </form>
                     <!-- /.Search Form -->
@@ -280,21 +280,29 @@
                                     <i class="bi-search"></i>
                                 </a>
                             </li>
-                            <li class="nav-item me-3">
+                            <li class="nav-item position-relative nav-badge-item me-3">
                                 <a class="nav-link btn-icon-circle fw-bold">
                                     <i class="bi-bell"></i>
                                 </a>
+                                <span class="position-absolute text-white badge rounded-pill bg-primary">
+                                    9+
+                                    <span class="visually-hidden">cart items</span>
+                                </span>
                             </li>
-                            <li class="nav-item me-3">
+                            <li class="nav-item position-relative nav-badge-item me-3">
                                 <a class="nav-link btn-icon-circle fw-bold">
                                     <i class="bi-cart2"></i>
                                 </a>
+                                <span class="position-absolute text-white badge rounded-pill bg-primary">
+                                    3
+                                    <span class="visually-hidden">cart items</span>
+                                </span>
                             </li>
                             <li class="nav-item me-3">
-                                <a class="nav-link btn btn-sm btn-outline-primary" href="/login.html" role="button">Sign In</a>
+                                <a class="nav-link btn btn-sm btn-outline-primary" href="login.html" role="button">Sign In</a>
                             </li>
                             <li class="nav-item">
-                                <a class="nav-link btn btn-sm btn-primary" href="/register.html" role="button">Join Us</a>
+                                <a class="nav-link btn btn-sm btn-primary" href="register.html" role="button">Join Us</a>
                             </li>
                         </ul>
                     </div>
@@ -308,7 +316,7 @@
                 <div class="container">
                     <nav class="nav" aria-label="Secondary navigation">
                         <a class="nav-link" href="#">
-                            <small class="text-capitalize">Math</small>
+                            <small class="text-capitalize">Mathematics</small>
                         </a>
                         <a class="nav-link" href="#">
                             <small class="text-capitalize">Physics</small>
@@ -1993,7 +2001,7 @@
     </main>
 
     <!-- Side Menu -->
-    <div class="sidebar-menu offcanvas offcanvas-start" tabindex="-1" id="sidebar-menu" aria-labelledby="sidebar-menu-label">
+    <aside class="sidebar-menu offcanvas offcanvas-start show" tabindex="-1" id="sidebar-menu" aria-labelledby="sidebar-menu-label">
         <div class="offcanvas-header py-0">
             <a class="navbar-brand app-logo" href="/">
                 <img src="assets/images/app/dr-tinaking-icon-logo.png" alt="Dr. TinaKing logo" width="33" height="30">
@@ -2004,60 +2012,76 @@
         <div class="offcanvas-body pt-0">
             <ul class="list">
                 <li class="list-item">
-                    <a href="/register.html">
+                    <a href="register.html">
                         <i class="bi-person me-3"></i> Create an account
                     </a>
                 </li>
                 <li class="list-item">
-                    <a href="/dashboard.html">
+                    <a href="dashboard.html">
                         <i class="bi-grid me-3"></i> Dashboard
                     </a>
                 </li>
                 <li class="list-item">
-                    <a href="/calendar.html">
+                    <a href="calendar.html">
                         <i class="bi-calendar4-week me-3"></i> My Timetable
                     </a>
                 </li>
                 <li class="list-item">
-                    <a href="/courses.html">
+                    <a href="courses.html">
                         <i class="bi-journals me-3"></i> My Courses
                     </a>
+                    <span class="float-end me-3 badge bg-primary text-white">
+                        12
+                        <span class="visually-hidden">courses</span>
+                    </span>
                 </li>
                 <li class="list-item">
-                    <a href="/leaderboard.html">
+                    <a href="leaderboard.html">
                         <i class="bi bi-bar-chart-steps me-3"></i> Leaderboard
                     </a>
                 </li>
                 <li class="list-item">
-                    <a href="/awards.html">
+                    <a href="awards.html">
                         <i class="bi-trophy me-3"></i> Awards
                     </a>
+                    <span class="float-end me-3 badge bg-primary text-white">
+                        2
+                        <span class="visually-hidden">awards</span>
+                    </span>
                 </li>
                 <li class="list-item">
-                    <a href="/wishlist.html">
+                    <a href="wishlist.html">
                         <i class="bi-journal-bookmark me-3"></i> Wishlist
                     </a>
+                    <span class="float-end me-3 badge bg-primary text-white">
+                        5
+                        <span class="visually-hidden">wishlist</span>
+                    </span>
                 </li>
                 <li class="list-item">
-                    <a href="/purchases.html">
+                    <a href="purchases.html">
                         <i class="bi-cart2 me-3"></i> Purchases
                     </a>
+                    <span class="float-end me-3 badge bg-primary text-white">
+                        1
+                        <span class="visually-hidden">purchases</span>
+                    </span>
                 </li>
             </ul>
             <hr>
             <ul class="list">
                 <li class="list-item">
-                    <a href="/calendar.html">
+                    <a href="calendar.html">
                         <i class="bi-chat me-3"></i> Chat
                     </a>
                 </li>
                 <li class="list-item">
-                    <a href="/courses.html">
+                    <a href="courses.html">
                         <i class="bi-gear me-3"></i> Settings
                     </a>
                 </li>
                 <li class="list-item">
-                    <a href="/logout.html">
+                    <a href="logout.html">
                         <i class="bi-power me-3"></i> Logout
                     </a>
                 </li>
@@ -2083,7 +2107,7 @@
                 </div>
             </div>
         </div>
-    </div>
+    </aside>
     <!-- /.Side Menu -->
 
     <!-- Footer -->
