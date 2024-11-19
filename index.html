@@ -73,6 +73,7 @@
         }
     </script>
 
+    <!-- Page Script -->
     <script>
         // Car image
         const whiteVan = 'assets/images/app/white_van.png';
@@ -85,7 +86,7 @@
             lat: -17.7464668454956, 
             lng: 31.016642406010643
         };
-
+        
         var map;
 
         function initMap() {
@@ -126,13 +127,16 @@
                         if (status === 'OK') {
                             directionsRenderer.setDirections(result);
 
+                            console.log(result);
+
                             // Traffic status
                             const leg = result.routes[0].legs[0]; 
-                            displayTrafficStatus(leg);
-
                             var route = result.routes[0].overview_path;
-                            var distance = result.routes[0].legs[0].distance.text;
-                            var duration = result.routes[0].legs[0].duration.text;
+                            var distance = leg.distance.text;
+                            var duration = leg.duration.text;
+
+                            // Show traffic status
+                            displayTrafficStatus(leg);
                             
                             // Display the distance and the duration on the map
                             document.getElementById('time-value').innerHTML = duration;
@@ -198,19 +202,27 @@
         }
 
         function displayTrafficStatus(leg) { 
-            let trafficStatus = 'Normal Traffic'; 
-            let trafficStatusElement = document.getElementById('traffic-status');
+            let statusColor = 'text-success';
+            let trafficStatus = 'Normal Traffic';
+            const lightTrafficThreshold = 1200; // 20 minutes 
+            const moderateTrafficThreshold = 1800; // 30 minutes
+            const durationInTraffic = leg.duration.value; // Duration in seconds
 
-            const durationInTraffic = leg.duration_in_traffic ? leg.duration_in_traffic.value : leg.duration.value; 
-            const trafficDifference = durationInTraffic - leg.duration.value; 
-            if (trafficDifference > 0 && trafficDifference <= 600) { 
+            if (durationInTraffic <= lightTrafficThreshold) { 
+                trafficStatus = 'Light Traffic'; 
+                statusColor = 'text-success';
+            } else if (durationInTraffic <= moderateTrafficThreshold) { 
                 trafficStatus = 'Moderate Traffic'; 
-                trafficStatusElement.style.color = 'green';
-            } else if (trafficDifference > 600) { 
+                statusColor = 'text-warning';
+            } else {
                 trafficStatus = 'Heavy Traffic'; 
-                trafficStatusElement.style.color = 'red';
-            } 
-            trafficStatusElement.innerText = trafficStatus;
+                statusColor = 'text-danger';
+            }
+
+            document.getElementById('time-value').className = statusColor;
+            document.getElementById('traffic-status').className = statusColor; 
+            document.getElementById('traffic-status').innerText = trafficStatus;
+
         }
     </script>
 </head>
@@ -1758,7 +1770,7 @@
                                         <div class="d-block text-center">
                                             <!-- Distance Info -->
                                             <h6>
-                                               <span id="time-value" class="text-success"></span>
+                                               <span id="time-value"></span>
                                                <span id="distance-value" class="text-muted"></span>
                                            </h6>
                                            <!-- /.Distance Info -->
