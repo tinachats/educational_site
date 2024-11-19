@@ -152,6 +152,10 @@
     line-height: 0;
 }
 
+.nav-link.btn-icon-circle {
+    font-size: 1rem;
+}
+
 .btn-icon-circle:hover {
     background-color: var(--light-app-color);
     color: var(--app-color);

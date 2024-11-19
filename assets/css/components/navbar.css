@@ -16,6 +16,11 @@
     padding-bottom: 0;
 }
 
+.navbar-nav {
+    display: flex !important;
+    flex-basis: auto;
+}
+
 .navbar .navbar-brand{
     object-fit: contain;
 }
@@ -30,6 +35,23 @@
 
 .navbar .btn {
     font-size: var(--text-sm);
+}
+
+.navbar.main-nav .search-form {
+    position: relative;
+    width: 400px;
+}
+
+.navbar.main-nav .search-form>input {
+    border-radius: 0.5rem;
+}
+
+.navbar.main-nav .search-form>i.search-icon {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 5%;
+    font-size: 1rem;
 }
 /* /.Main Nav */
 

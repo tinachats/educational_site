@@ -239,38 +239,66 @@
             <!-- Navbar -->
             <nav class="navbar main-nav navbar-expand-lg bg-body-tertiary border-bottom">
                 <div class="container">
-                    <a class="btn-icon-circle fw-bold mt-2 me-3"  data-bs-toggle="offcanvas" href="#sidebar-menu" role="button" aria-controls="sidebar-menu">
-                        <i class="bi-list"></i>
-                    </a>
+                    <!-- Toggle Side Menu Button -->
+                    <div class="d-inline-flex d-md-none">
+                        <a class="btn-icon-circle fw-bold mt-2 me-3"  data-bs-toggle="offcanvas" href="#sidebar-menu" role="button" aria-controls="sidebar-menu">
+                            <i class="bi-list"></i>
+                        </a>
+                    </div>
+                    <!-- /. Toggle Side Menu Button -->
+
+                    <!-- Logo -->
                     <a class="navbar-brand app-logo" href="/">
                         <img src="assets/images/app/dr-tinaking-icon-logo.png" alt="Dr. TinaKing logo" width="33" height="30">
-                        <span class="d-none d-md-inline-block">TinaKing</span>
+                        <span class="d-none d-md-inline-flex">TinaKing</span>
                     </a>
-                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                        <span class="navbar-toggler-icon"></span>
-                    </button>
-                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Courses</a>
-                        </li>
+                    <!-- /.Logo -->
+
+                    <!-- Left-Side Nav Elements -->
+                    <ul class="d-none d-md-inline-flex navbar-nav me-auto mb-2 mb-lg-0">
                         <li class="nav-item">
                             <a class="nav-link" href="#">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#">Contact Us</a>
                         </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-sm btn-outline-primary" href="/login.html" role="button">Sign In</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link btn btn-sm btn-primary ms-2" href="/register.html" role="button">Join Us</a>
-                        </li>
+                    </ul>
+                    <!-- /.Left-Side Nav Elements -->
+
+                    <!-- Search Form -->
+                    <form class="search-form d-md-flex d-none position-relative me-3" role="search">
+                        <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                        <i class="bi-search search-icon"></i>
+                    </form>
+                    <!-- /.Search Form -->
+
+                    <!-- Right-Side Nav Elements -->
+                    <div class="d-flex align-items-center">
+                        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                            <li class="d-inline-flex d-md-none nav-item me-3">
+                                <a class="nav-link btn-icon-circle fw-bold">
+                                    <i class="bi-search"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link btn-icon-circle fw-bold">
+                                    <i class="bi-bell"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link btn-icon-circle fw-bold">
+                                    <i class="bi-cart2"></i>
+                                </a>
+                            </li>
+                            <li class="nav-item me-3">
+                                <a class="nav-link btn btn-sm btn-outline-primary" href="/login.html" role="button">Sign In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-sm btn-primary" href="/register.html" role="button">Join Us</a>
+                            </li>
                         </ul>
                     </div>
+                    <!-- /.Right-Side Nav Elements -->
                 </div>
             </nav>
             <!-- /.Navbar -->
@@ -279,7 +307,7 @@
             <div class="nav-scroller bg-body-tertiary shadow-sm border-bottom">
                 <div class="container">
                     <nav class="nav" aria-label="Secondary navigation">
-                        <a class="nav-link active" href="#">
+                        <a class="nav-link" href="#">
                             <small class="text-capitalize">Math</small>
                         </a>
                         <a class="nav-link" href="#">
@@ -1965,7 +1993,7 @@
     </main>
 
     <!-- Side Menu -->
-    <div class="sidebar-menu offcanvas offcanvas-start show" tabindex="-1" id="sidebar-menu" aria-labelledby="sidebar-menu-label">
+    <div class="sidebar-menu offcanvas offcanvas-start" tabindex="-1" id="sidebar-menu" aria-labelledby="sidebar-menu-label">
         <div class="offcanvas-header py-0">
             <a class="navbar-brand app-logo" href="/">
                 <img src="assets/images/app/dr-tinaking-icon-logo.png" alt="Dr. TinaKing logo" width="33" height="30">
