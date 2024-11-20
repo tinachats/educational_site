@@ -1,3 +1,7 @@
+.card {
+    border: var(--border-width) solid var(--border-color);
+}
+
 .card-title,
 .text-truncate-line-2 {
     max-height: 3rem;

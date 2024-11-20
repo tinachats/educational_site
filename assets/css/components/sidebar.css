@@ -54,7 +54,7 @@
 } 
 
 .sidebar-menu>.offcanvas-body>.list>.list-item>a {
-    color: var(--dark);
+    color: var(--light-black);
 }
 
 .sidebar-menu>.offcanvas-footer>.profile-wrapper {

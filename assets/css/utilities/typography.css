@@ -2,6 +2,7 @@
 @import url('spacing.css');
 
 :root {
+    --border-width: 1px;
     --text-sm: 0.875rem;
 }
 

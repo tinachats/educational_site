@@ -193,6 +193,29 @@ document.addEventListener('DOMContentLoaded', function() {
 
   btnScrollTop.addEventListener('click', scrollToTop);
   document.addEventListener('scroll', handleScroll);
+
+  // Change the theme 
+  const toggleTheme = document.getElementById('theme-change'); 
+  const body = document.body; 
+
+  // Load saved theme from localStorage if exists 
+  const savedTheme = localStorage.getItem('theme');
+
+  if (savedTheme) { 
+    body.classList.add(savedTheme); 
+    toggleTheme.checked = savedTheme === 'dark-mode'; 
+  } 
+  
+  toggleTheme.addEventListener('change', () => { 
+    body.classList.toggle('dark-mode');
+
+    // Save the current theme to localStorage 
+    if (body.classList.contains('dark-mode')) { 
+      localStorage.setItem('theme', 'dark-mode'); 
+    } else { 
+      localStorage.removeItem('theme'); 
+    } 
+  });
 });
 
 

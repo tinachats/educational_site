@@ -109,11 +109,16 @@
     padding-bottom: .75rem;
     font-weight: 500;
     font-size: .875rem;
-    color: var(--text-muted);
+}
+
+.nav-scroller .nav-link,
+.nav-scroller .nav-link>small {
+    color: var(--text-light-gray);
 }
 
 .nav-scroller .nav-link.active,
-.nav-scroller .nav-link:hover {
+.nav-scroller .nav-link:hover,
+.nav-scroller .nav-link:hover>small {
     color: var(--app-color) !important;
 }
 /* /.Nav Scroller */

@@ -17,6 +17,7 @@
 
 .hero-section #student-searching>.student-search-result {
     position: absolute;
+    border: 0.15px solid var(--border-color);
     padding: 0.75rem;
     width: 200px;
     z-index: 10;
