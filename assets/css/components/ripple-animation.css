@@ -6,6 +6,7 @@
     background-color: transparent;
 }
 
+.ripples>.inner-ripple,
 .ripples>.outer-ripple,
 .ripples>.middle-ripple{
     position: absolute;
@@ -70,4 +71,26 @@
     width: 100%;
     object-fit: cover;
     place-self: center;
+}
+
+/* Applies to x-small devices (portrait phones, less than 576px) */
+@media (max-width: 576px) {
+    #student-searching {
+        margin: 10rem auto;
+    }
+
+    .ripples>.inner-ripple {
+        height: 120px;
+        width: 120px;
+    }
+
+    .ripples>.middle-ripple {
+        height: 220px;
+        width: 220px;
+    }
+
+    .ripples>.outer-ripple {
+        height: 320px;
+        width: 320px;
+    }
 }

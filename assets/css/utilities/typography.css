@@ -83,10 +83,25 @@ label {
     color: var(--app-color) !important;
 }
 
-.small, small {
-    font-size: .875em;
+.small, small, .text-sm {
+    font-size: .875em !important;
 }
 
 .text-white-stable {
     color: #fff;
+}
+
+/* Small devices (landscape phones, 576px) */
+@media (max-width: 576px) {
+    h1, .h1, .display-4 {
+        font-size: 1.75rem;
+    }
+
+    h2, .h2, .display-5 {
+        font-size: 1.5rem;
+    }
+
+    h6, .h6, p, li {
+        font-size: 0.875rem;
+    }
 }

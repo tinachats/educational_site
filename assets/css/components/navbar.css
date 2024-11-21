@@ -207,18 +207,18 @@
 .nav-tabs {
     background-color: none;
     justify-content: space-between;
-    border-bottom: 2px solid var(--border-color);
+    border-bottom: 1px solid var(--border-color);
 }
 
-.nav-tabs .nav-item .nav-link {
+.nav-tabs>.nav-item>.nav-link {
     border: none;
     border-top-left-radius: 0;
     border-top-right-radius: 0;
     font-weight: 500;
-    color: var(--text-muted);
+    color: var(--text-light-gray);
 }
 
-.nav-tabs .nav-item .nav-link.active {
+.nav-tabs>.nav-item>.nav-link.active {
     background-color: transparent;
     border-bottom: 5px solid var(--app-color);
     border-radius: 10px 10px 0 0; /* Rounded top edges */ 
@@ -238,23 +238,18 @@
 
 /* Medium devices (tablets, 768px and down) */
 @media screen and (max-width: 768px) {
-    .navbar.main-nav {
-        display: flex;
-        flex-direction: row;
-        align-items: center;
-        flex-wrap: nowrap;
-        justify-content: space-evenly;
+    .navbar.main-nav,
+    .navbar.main-nav .nav-list {
+        clear: both;
         width: 100%;
     } 
-    .navbar.main-nav .navbar-brand {
-        margin-left: -6rem;
-    } 
 
-    .navbar.main-nav .navbar-nav.nav-end {
-        display: flex;
-        flex-direction: row;
-        justify-content: space-between;
-        align-items: center;
-    } 
+    .navbar.main-nav .nav-list>.toggle-sidebar-btn {
+        margin-left: -2.5rem;
+    }
+
+    .nav-tabs>.nav-item>.nav-link {
+        font-size: 0.75rem;
+    }
 }
 
