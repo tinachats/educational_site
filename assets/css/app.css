@@ -96,6 +96,28 @@ input[type=number]::-webkit-outer-spin-button {
     cursor: pointer;
 }
 
+.bullet-dot {
+    position: absolute;
+    bottom: 0;
+    right: 0.25rem;
+    display: inline-block;
+    flex-shrink: 0;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    border: 1px solid var(--white);
+}
+
+.animation-blink {
+    animation: blink 1s steps(5, start) infinite;
+}
+
+@keyframes blink { 
+    100% { 
+        visibility: hidden; 
+    } 
+}
+
 footer.footer {
     flex-shrink: 0;
 }

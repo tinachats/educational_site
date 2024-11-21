@@ -14,11 +14,21 @@
     margin-bottom: 0;
     padding-top: 0;
     padding-bottom: 0;
+    width: 100%;
 }
 
-.navbar-nav {
-    display: flex !important;
-    flex-basis: auto;
+.navbar.main-nav .nav-list {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    list-style: none;
+    width: 100%;
+}
+
+.navbar.main-nav .nav-list>li.nav-item,
+.navbar.main-nav .search-form {
+    margin-top: 0.5rem;
 }
 
 .navbar .navbar-brand{
@@ -79,6 +89,23 @@
     vertical-align: middle;
     text-align: center;
 }
+
+.navbar.main-nav .nav-item.avatar-wrapper,
+.navbar.main-nav .nav-item.avatar-wrapper>img {
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+}
+
+.navbar.main-nav .nav-item.avatar-wrapper {
+    position: relative;
+    background: var(--linear-gradient);
+}
+
+.navbar.main-nav .nav-item.avatar-wrapper>img {
+    object-fit: cover;
+}
+
 /* /.Main Nav */
 
 /* Nav Scroller */
@@ -211,6 +238,23 @@
 
 /* Medium devices (tablets, 768px and down) */
 @media screen and (max-width: 768px) {
+    .navbar.main-nav {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: nowrap;
+        justify-content: space-evenly;
+        width: 100%;
+    } 
+    .navbar.main-nav .navbar-brand {
+        margin-left: -6rem;
+    } 
 
+    .navbar.main-nav .navbar-nav.nav-end {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    } 
 }
 

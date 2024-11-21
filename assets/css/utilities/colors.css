@@ -43,6 +43,7 @@
     --bs-tertiary-bg-rgb: 15, 23, 42;
     --dark: var(--light);
     --light: var(--dark);
+    --light-app-color: #9783dd1f;
     --light-black: #ccc;
     --text-muted: #7c7c7d;
     --light-purple: #002B36;

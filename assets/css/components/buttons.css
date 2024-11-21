@@ -146,7 +146,7 @@
     border-radius: 50%;
     background-color: transparent;
     color: var(--black);
-    font-size: 1.75rem;
+    font-size: 2rem;
     font-weight: bold;
     padding: 0;
     line-height: 0;
@@ -158,6 +158,6 @@
 
 .btn-icon-circle:hover {
     background-color: var(--light-app-color);
-    color: var(--app-color);
+    color: #fff;
     transition: background-color 0.3s ease-in-out;
 }
