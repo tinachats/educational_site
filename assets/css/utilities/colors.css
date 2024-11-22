@@ -14,12 +14,14 @@
     --bs-heading-color: inherit;
     --bs-emphasis-color-rgb: 0, 0, 0;
     --bs-tertiary-bg-rgb: 248, 249, 250;
+    --cloud-purple: #f99efc48;
     --dark: #0f172a;
     --light: #f8f9fa;
     --light-app-color: #eee5fb;
+    --light-gray: #f1f0ee;
     --light-purple: #ebeeff;
     --linear-gradient: linear-gradient(to right, #7F39F8 0%, #543DE7 51%, #7F39F8 100%);
-    --text-linear-gradient: linear-gradient(74deg, #4285f4 0,#9b72cb 9%,#d96570 20%,#d96570 24%,#9b72cb 35%,#4285f4 44%,#9b72cb 50%,#d96570 56%,#fff 75%,#fff 100%);
+    --text-linear-gradient: linear-gradient(74deg, #4285f4 0,#9b72cb 9%,#d96570 20%,#d96570 24%,#9b72cb 35%,#4285f4 44%,#9b72cb 50%,#d96570 56%,#1fbed0 75%,#c4cd0d 100%);
     --text-muted: #6c757d03;
     --text-light-gray: #6c757d;
     --purple: #754ffe;
@@ -72,6 +74,10 @@
 .bg-info-soft {
     background-color: rgba(14, 165, 233, .1) !important;
     color: #0ea5e9 !important;
+}
+
+.bg-linear-gradient {
+    background: var(--linear-gradient);
 }
 
 .bg-primary {

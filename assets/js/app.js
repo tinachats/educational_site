@@ -148,6 +148,13 @@ function populateDropdown() {
     });
 }
 
+// Ripple animation
+function rippleAnimation() {
+  const epiCenter = document.querySelector('.inner-ripple');
+  epiCenter.style.setProperty('--before-animation', 'ripple 2s linear infinite');
+  epiCenter.style.setProperty('--after-animation', 'ripple 2s 1s linear infinite');
+}
+
 // Scroll-to-Top button
 document.addEventListener('DOMContentLoaded', function() {
   const btnScrollTop = document.getElementById('btn-scroll-top');
@@ -216,6 +223,11 @@ document.addEventListener('DOMContentLoaded', function() {
       localStorage.removeItem('theme'); 
     } 
   });
+
+  // Start the simulation
+  setTimeout(() => {
+    rippleAnimation();
+  }, 3000);
 });
 
 

@@ -118,6 +118,34 @@ input[type=number]::-webkit-outer-spin-button {
     } 
 }
 
+/* Content Loading Animation */
+.content-loading-animation {
+    -webkit-animation-duration: 3s;
+    animation-duration: 3s;
+    -webkit-animation-iteration-count: infinite;
+    animation-iteration-count: infinite;
+    -webkit-animation-name: placeHolderShimmer;
+    animation-name: placeHolderShimmer;
+    -webkit-animation-timing-function: linear;
+    animation-timing-function: linear;
+    background: -webkit-gradient(linear, left top, right top, color-stop(8%, var(--cloud-purple)), color-stop(18%, #84578955), color-stop(33%, var(--cloud-purple)));
+    background: -webkit-linear-gradient(left, 8% var(--cloud-purple), 18% #84578955, 33% var(--cloud-purple));
+    background: linear-gradient(to right, var(--cloud-purple) 8%, #84578955 18%, var(--cloud-purple) 33%);
+    height: inherit;
+    position: relative;
+}
+
+@keyframes placeHolderShimmer {
+    0% {
+        background-position: -468px 0;
+    }
+    100% {
+        background-position: 468px 0;
+    }
+}
+
+/* Content Loading Animation */
+
 footer.footer {
     flex-shrink: 0;
 }

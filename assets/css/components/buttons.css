@@ -1,7 +1,7 @@
 @import url('../utilities/colors.css');
 
 :root {
-    --btn-border-radius: 0.35rem;
+    --btn-border-radius: 0.5rem;
     --btn-lg-border-radius: 0.75rem;
     --bs-btn-padding-y: 0.25rem;
     --bs-btn-padding-x: 0.5rem;
@@ -170,7 +170,7 @@
 /* Applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 575.98px) {
     .btn-lg {
-        --btn-lg-p-x: 0.5rem;
+        --btn-lg-p-x: 0.75rem;
         --btn-lg-p-y: 0.25rem;
         --btn-lg-radius: 0.35rem;
         --btn-lg-font-size: 0.875rem;

@@ -1,3 +1,8 @@
+:root {
+    --before-animation: ripple 2s linear infinite;
+    --after-animation: ripple 2s 1s linear infinite;
+}
+
 .ripples {
     position: relative;
     display: flex;
@@ -52,11 +57,11 @@
 }
 
 .ripples>.inner-ripple:before {
-    animation: ripple 2s linear infinite;
+    animation: var(--before-animation);
 }
 
-.ripples>.inner-ripple:before {
-    animation: ripple 2s 1s linear infinite;
+.ripples>.inner-ripple:after {
+    animation: var(--after-animation);
 }
 
 @keyframes ripple {
