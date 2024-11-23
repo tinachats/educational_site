@@ -55,8 +55,13 @@
 .navbar.main-nav .search-form>input {
     background-color: var(--white);
     border: 1px solid var(--border-color);
-    border-radius: 0.5rem;
-    padding-right: 2rem;
+    border-radius: 10rem;
+    padding-left: 1rem;
+    padding-right: 2.5rem;
+}
+
+.navbar.main-nav .search-form>input::placeholder {
+    color: var(--text-light-gray);
 }
 
 .navbar.main-nav .search-form>i.search-icon {

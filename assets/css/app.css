@@ -33,6 +33,11 @@ body {
     padding-bottom: 7rem;
 }
 
+.number-text {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 500;
+}
+
 .illustration-wrapper {
     position: relative;
     display: block;

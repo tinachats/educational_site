@@ -28,30 +28,15 @@
     transform: translate(100%, 25%);
 }
 
-/* .student-search-result#first-student .title-placeholder,
-.student-search-result#first-student .content-placeholder {
-    background-color: #139a74;
-} */
-
 .student-search-result#second-student {
     top: 40%;
     left: -5%;
 }
 
-/* .student-search-result#second-student .title-placeholder,
-.student-search-result#second-student .content-placeholder {
-    background-color: #51a0c2;
-} */
-
 .student-search-result#third-student {
     top: 60%;
     right: -10%;
 }
-
-/* .student-search-result#third-student .title-placeholder,
-.student-search-result#third-student .content-placeholder {
-    background-color: #ae302e;
-} */
 
 .student-info .title-placeholder,
 .student-info .content-placeholder {
