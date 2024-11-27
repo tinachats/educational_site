@@ -155,6 +155,17 @@ function rippleAnimation() {
   epiCenter.style.setProperty('--after-animation', 'ripple 2s 1s linear infinite');
 }
 
+const gear = document.getElementById('terminal-gear'); 
+const cursor = document.getElementById('terminal-cursor');
+
+function animateGearAndCursor() { 
+  gear.style.animation = 'rotate 5s linear infinite'; 
+  setInterval(() => { 
+    cursor.style.animation = 'blink 0.5s 3'; 
+  
+  }, 5000);
+}
+
 // Scroll-to-Top button
 document.addEventListener('DOMContentLoaded', function() {
   const btnScrollTop = document.getElementById('btn-scroll-top');

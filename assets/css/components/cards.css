@@ -20,3 +20,34 @@
     border-top: 1px solid var(--border-color);
     padding: 1rem 1.5rem;
 }
+
+.streak-card-sm .streak-fire-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+}
+
+.streak-card-sm .streak-fire-wrapper>img {
+    margin: auto;
+}
+
+.streak-card-sm .streak-week-days .streak-status {
+    display: grid;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: .35rem;
+    color: #fff;
+    font-weight: bold;
+}
+
+.streak-card-sm .streak-week-days .streak-status.streak-paused {
+    background-color: var(--bullet-inactive-color);
+}
+
+.streak-card-sm .streak-week-days .streak-status.streak-play {
+    background-color: var(--app-color);
+}
+
+.streak-card-sm .streak-week-days .streak-status>i {
+    margin: auto;
+}

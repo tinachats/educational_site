@@ -38,6 +38,29 @@ body {
     font-weight: 500;
 }
 
+.AnimatedIcon__icon {
+    top: calc(96px* -1 / 2 - 40px* -1 / 2);
+    left: 0;
+    display: block;
+    pointer-events: none;
+}
+
+@keyframes completeRotation { 
+    from { 
+        transform: rotate(0deg); 
+    } 
+    to { 
+        transform: rotate(360deg); 
+    } 
+} @keyframes blinkCursor { 
+    0%, 50%, 100% { 
+        opacity: 1; 
+    } 
+    25%, 75% { 
+        opacity: 0; 
+    } 
+}
+
 .illustration-wrapper {
     position: relative;
     display: block;

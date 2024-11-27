@@ -61,6 +61,7 @@
     justify-content: center;
 }
 
+.avatar-placeholder,
 .avatar-group img {
     border: 3px solid var(--white);
 }
@@ -78,12 +79,27 @@
     height: 2.5rem;
     width: 2.5rem;
 }
+
+.avatar-placeholder,
 .avatar {
-    display: inline-block;
     position: relative;
     height: 3rem;
     width: 3rem;
     margin-left: -1.5rem;
+}
+
+.avatar {
+    display: inline-block;
+}
+
+.avatar-placeholder {
+    display: grid;
+}
+
+.avatar-placeholder>span{
+    color: #fff;
+    font-weight: bold;
+    margin: auto;
 }
 
 .content-aggregate-body {
