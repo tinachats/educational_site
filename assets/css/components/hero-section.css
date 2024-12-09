@@ -107,6 +107,62 @@
     margin-top: -5rem;
 }
 
+.app-list {
+    list-style: none;
+}
+
+.app-list-item {
+    position: relative;
+    height: 100%;
+    width: 100%;
+}
+
+.app-list-item::after,
+.app-list-item::before {
+    position: absolute;
+    content: '';
+    left: 0.75rem;
+    top: 3.75rem;
+    height: 100%;
+    width: 5px;
+}
+
+.app-list-item::before {
+    background-color: var(--text-muted);
+}
+
+.app-list-item:first-child::after {
+    background: linear-gradient(var(--app-color) 55%, #198754);
+}
+
+.app-list-item:nth-child(2)::after {
+    background: linear-gradient(#198754 55%, orangered);
+}
+
+.app-list-item:nth-child(3)::after {
+    background: linear-gradient(orangered 55%, #0dcaf0);
+}
+
+.app-list-item:last-child::after {
+    background: linear-gradient(#0dcaf0 55%, transparent);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-icon {
+    font-size: 2rem;
+    background-color: transparent;
+    padding: .75rem .75rem .75rem 0;
+}
+
+.section-content {
+    margin-left: 2.75rem;
+}
+
 /* Applies to x-small devices (portrait phones, less than 576px) */
 @media (max-width: 576px) {
     .hero-section #student-searching>.student-search-result {

@@ -87,6 +87,18 @@ label {
     font-size: .875em !important;
 }
 
+.text-light-gray {
+    color: var(--text-light-gray);
+}
+
+.text-purple-magenta {
+    color: var(--purple-magenta);
+}
+
+.text-orange {
+    color: orangered;
+}
+
 .text-white-stable {
     color: #fff;
 }

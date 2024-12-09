@@ -115,10 +115,6 @@
     background-color: transparent;
 }
 
-.text-light-gray {
-    color: var(--text-light-gray);
-}
-
 label, p, span, small {
     color: var(--light-black);
 }
