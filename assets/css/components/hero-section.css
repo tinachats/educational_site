@@ -113,38 +113,61 @@
 
 .app-list-item {
     position: relative;
-    height: 100%;
-    width: 100%;
+}
+
+@property --line-color {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: var(--text-muted);
+}
+
+@property --line-height {
+    syntax: '<height>';
+    inherits: false;
+    initial-value: 0%;
 }
 
 .app-list-item::after,
 .app-list-item::before {
     position: absolute;
     content: '';
+    background: var(--line-color);
+    display: block;
     left: 0.75rem;
     top: 3.75rem;
-    height: 100%;
+    height: var(--line-height);
     width: 5px;
+    transition: all .5s ease-in-out;
 }
 
-.app-list-item::before {
-    background-color: var(--text-muted);
+.app-list-item .section-title,
+.app-list-item .key-point {
+    color: var(--dark);
 }
 
-.app-list-item:first-child::after {
-    background: linear-gradient(var(--app-color) 55%, #198754);
+.app-list-item.active .section-title,
+.app-list-item.active .key-point {
+    transition: color 3s ease-in-out;
 }
 
-.app-list-item:nth-child(2)::after {
-    background: linear-gradient(#198754 55%, orangered);
+.app-list-item.active:first-child .section-title,
+.app-list-item.active:first-child .key-point {
+    color: var(--app-color);
 }
 
-.app-list-item:nth-child(3)::after {
-    background: linear-gradient(orangered 55%, #0dcaf0);
+.app-list-item.active:nth-child(2) .section-title,
+.app-list-item.active:nth-child(2) .key-point {
+    color: var(--success-rgb);
 }
 
-.app-list-item:last-child::after {
-    background: linear-gradient(#0dcaf0 55%, transparent);
+.app-list-item.active:nth-child(3) .section-title,
+.app-list-item.active:nth-child(3) .key-point {
+    color: orangered;
+}
+
+.app-list-item.active:last-child .section-title,
+.app-list-item.active:last-child .key-point {
+    color: var(--info-rgb);
 }
 
 .section-title {

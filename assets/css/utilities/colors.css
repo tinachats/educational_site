@@ -31,6 +31,8 @@
     --purple-shadow: -3px 6px 14px -5px rgba(219,13,219,0.3);
     --shadow-sm: 0 .125rem .25rem rgba(0, 0, 0, .075);
     --shadow-lg: 0 1rem 3rem rgba(0, 0, 0, .175);
+    --success-rgb: #198754;
+    --info-rgb:#0dcaf0;
     --white: #ffffff; 
 }
 
