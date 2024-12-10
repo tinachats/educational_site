@@ -236,29 +236,27 @@
 
 .navigation-map-wrapper .colleague {
     position: absolute;
-    height: 100px;
-    width: 100px;
 }
 
 .navigation-map-wrapper .colleague:first-child {
-    left: 2%;
-    top: 2%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
 }
 
 .navigation-map-wrapper .colleague:nth-child(2) {
-    left: 65%;
+    left: 2%;
     top: 2%;
 }
 
 .navigation-map-wrapper .colleague:nth-child(3) {
     right: 3%;
-    top: 70%;
+    top: 5%;
 }
 
 .navigation-map-wrapper .colleague:nth-child(4) {
-    left: 50%;
-    top: 50%;
-    transform: translate(-50%, -50%);
+    left: 2%;
+    bottom: 5%;
 }
 
 .navigation-map-wrapper .colleague:last-child {
