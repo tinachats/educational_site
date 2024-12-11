@@ -272,10 +272,15 @@
     display: block;
     position: absolute;
     background-color: var(--bs-body-bg);
-    width: fit-content;
+    min-width: 250px;
     font-size: .75rem;
     left: 80px;
     top: 20px;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
 }
 
 /* Applies to x-small devices (portrait phones, less than 576px) */

@@ -8,6 +8,11 @@
     --bs-btn-font-size: 0.875rem;
     --btn-p-x: 1.25rem;
     --btn-p-y: 0.35rem;
+    --btn-sm-p-x: 0.65rem;
+    --btn-sm-p-y: 0.1rem;
+    --btn-sm-radius: 0.25rem;
+    --btn-sm-font-size: 0.75rem;
+    --btn-sm-font-weight: 400;
     --btn-lg-p-x: 1.5rem;
     --btn-lg-p-y: 0.75rem;
     --btn-lg-radius: 0.5rem;
@@ -54,9 +59,16 @@
     background-position: right center !important;
 }
 
-.btn-outline-primary {
+.btn-outline-primary,
+.btn-outline-primary:disabled {
     border: 1px solid var(--primary-color);
     color: var(--primary-color) !important;
+}
+
+.btn-sm {
+    padding: var(--btn-sm-p-y) var(--btn-sm-p-x);
+    font-size: var(--btn-sm-font-weight);
+    font-weight: var(--btn-sm-font-weight);
 }
 
 .btn-lg {
@@ -139,6 +151,21 @@
     padding: 0;
     position: relative;
     width: 2.5rem;
+}
+
+.btn-sm-icon-circle {
+    display: grid;
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    border: inherit;
+    background-color: inherit;
+    box-sizing: border-box;
+}
+
+.btn-sm-icon-circle>i {
+    margin: auto;
+    font-size: .85rem;
 }
 
 .btn-icon-circle {

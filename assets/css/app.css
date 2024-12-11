@@ -38,6 +38,13 @@ body {
     font-weight: 500;
 }
 
+.at-symbol {
+    font-family: 'Outfit', sans-serif;
+    font-weight: 600;
+    font-size: 1.25rem;
+    margin-top: -6px;
+}
+
 .AnimatedIcon__icon {
     top: calc(96px* -1 / 2 - 40px* -1 / 2);
     left: 0;

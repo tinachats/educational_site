@@ -83,8 +83,13 @@
     background: var(--linear-gradient);
 }
 
-.bg-primary {
+.bg-primary,
+.text-bg-primary {
     background-color: var(--app-color) !important;
+}
+
+.border-primary {
+    border: 1px solid var(--app-color) !important;
 }
 
 .bg-purple-magenta {
@@ -106,6 +111,31 @@
     font-weight: 500;
     color: inherit;
     border-radius: 0.375rem;
+}
+
+.badge.rounded-pill {
+    padding: 0.25rem 0.4rem;
+    font-size: 0.5rem;
+    font-weight: 400;
+    color: inherit;
+}
+
+.badge-icon {
+    display: grid;
+    height: 40px;
+    width: 40px;
+    border-radius: 50%;
+    background-color: inherit;
+}
+
+.badge-icon>i {
+    margin: auto;
+    font-weight: 700;
+    font-size: 1.5rem;
+}
+
+.badge-icon>i.tilted-up {
+    transform: rotate(-45deg);
 }
 
 .border-gray-800 {
