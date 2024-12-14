@@ -1,2 +1,277 @@
 @import url('hero-section.css');
+@import url('circle-progress-bar.css');
+
+.app-list {
+    list-style: none;
+}
+
+.app-list-item {
+    position: relative;
+    z-index: 0;
+}
+
+@property --line-color {
+    syntax: '<color>';
+    inherits: true;
+    initial-value: var(--text-muted);
+}
+
+@property --line-height {
+    syntax: '<height>';
+    inherits: false;
+    initial-value: 0%;
+}
+
+.app-list-item::after,
+.app-list-item::before {
+    position: absolute;
+    content: '';
+    background: var(--line-color);
+    display: block;
+    left: 1.8rem;
+    top: 3.5rem;
+    height: var(--line-height);
+    width: 5px;
+    transition: all 1s ease-in-out;
+    z-index: -1;
+}
+
+.app-list-item.past::after,
+.app-list-item.past::before {
+    height: 100% !important;
+}
+
+.app-list-item .section-title,
+.app-list-item .key-point {
+    color: var(--dark);
+}
+
+.app-list-item.active .section-title,
+.app-list-item.active .key-point {
+    transition: color 3s ease-in-out;
+}
+
+.app-list-item.active:first-child .section-title,
+.app-list-item.active:first-child .key-point {
+    color: var(--app-color);
+}
+
+.app-list-item.active:nth-child(2) .section-title,
+.app-list-item.active:nth-child(2) .key-point {
+    color: var(--success-rgb);
+}
+
+.app-list-item.active:nth-child(3) .section-title,
+.app-list-item.active:nth-child(3) .key-point {
+    color: orangered;
+}
+
+.app-list-item.active:last-child .section-title,
+.app-list-item.active:last-child .key-point {
+    color: var(--info-rgb);
+}
+
+.section-title {
+    display: flex;
+    align-items: center;
+    margin-bottom: 2rem;
+}
+
+.section-icon {
+    display: grid;
+    background: var(--text-muted);
+    box-sizing: border-box !important;
+    border: 5px solid var(--bs-body-bg);
+    height: 4rem;
+    width: 4rem;
+    border-radius: 50%;
+    transition: background .5s ease-in-out;
+    margin-right: 1rem;
+}
+
+.app-list-item.active:first-child .section-icon {
+    background: var(--app-color);
+}
+
+.app-list-item.active:nth-child(2) .section-icon {
+    background: var(--success-rgb);
+}
+
+.app-list-item.active:nth-child(3) .section-icon {
+    background: orangered;
+}
+
+.app-list-item.active:last-child .section-icon {
+    background: var(--info-rgb);
+}
+
+.section-icon>i {
+    color: #fff;
+    font-size: 2rem;
+    margin: auto;
+}
+
+.section-content {
+    margin-left: 4.5rem;
+}
+
+.section-content .section-description {
+    margin-top: 3rem;
+}
+
+.section-footer {
+    margin-top: 3rem;
+}
+
+.navigation-map-wrapper,
+.navigation-map {
+    position: relative;
+}
+
+.navigation-map-wrapper .colleague {
+    position: absolute;
+}
+
+.navigation-map-wrapper .colleague:first-child {
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.navigation-map-wrapper .colleague:nth-child(2) {
+    left: 2%;
+    top: 2%;
+}
+
+.navigation-map-wrapper .colleague:nth-child(3) {
+    right: 3%;
+    top: 5%;
+}
+
+.navigation-map-wrapper .colleague:nth-child(4) {
+    left: 2%;
+    bottom: 5%;
+}
+
+.navigation-map-wrapper .colleague:last-child {
+    left: 10%;
+    bottom: 10%;
+}
+
+.navigation-map-wrapper .colleague>figure {
+    position: relative;
+}
+
+.navigation-map-wrapper .colleague>figure>.user-info {
+    display: block;
+    position: absolute;
+    background-color: var(--bs-body-bg);
+    min-width: 250px;
+    font-size: .75rem;
+    left: 80px;
+    top: 20px;
+}
+
+.stats {
+    display: flex;
+    align-items: center;
+}
+
+.calendar-wrapper {
+    width: 22rem;
+    height: auto;
+}
+
+.calendar-wrapper>.calendar-week {
+    position: absolute;
+    width: 100%;
+    padding: 3rem 1.3rem .5rem 1.3rem;
+}
+
+.calendar-wrapper>.calendar-week>.weekdays>.date {
+    position: relative;
+    z-index: 5;
+}
+
+.calendar-wrapper>.calendar-week>.weekdays>.date::before {
+    position: absolute;
+    content: '';
+    background-color: transparent;
+    box-sizing: border-box;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    border-radius: 15px;
+    margin-top: -.35rem; 
+    margin-left: -.3rem;
+    padding: .5rem 1rem;
+    transition: all .5s ease-in-out;
+    z-index: -1;
+}
+
+.calendar-wrapper>.calendar-week>.weekdays>.date.active::before {
+    background-color: var(--app-color);
+    filter: blur(.5px);
+}
+
+.calendar-wrapper>.calendar-week>.weekdays>.date>h6:last-child {
+    position: relative;
+}
+
+.calendar-wrapper>.calendar-week>.weekdays>.date>h6:last-child::before {
+    position: absolute;
+    content: '';
+    left: 5%;
+    top: -12%;
+    background-color: transparent;
+    box-shadow: var(--shadow-lg);
+    box-sizing: border-box;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    z-index: -1;
+}
+
+.calendar-wrapper>.calendar-week>.weekdays>.date>h6:last-child::before {
+    background-color: transparent;
+}
+
+.calendar-wrapper>.calendar-week>.weekdays>.date.active>h6:last-child::before {
+    background-color: #fff;
+}
+
+.calendar-wrapper>.calendar-week>.weekdays>.date>h6 {
+    font-size: 0.75rem;
+}
+
+.calendar-wrapper>.calendar-week>.weekdays>.date.active>h6:first-child {
+    color: #fff !important;
+}
+
+.calendar-wrapper>.calendar-week>.calendar-title {
+    position: relative;
+    background-color: var(--white);
+}
+
+.calendar-wrapper>.calendar-week>.calendar-title::before {
+    position: absolute;
+    content: '';
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 100%;
+    height: 3px;
+    background-color: var(--light-gray);
+    margin-top: -5px;
+    z-index: 0;
+}
+
+.calendar-wrapper>.calendar-week>.calendar-title>h6 {
+    background-color: var(--white);
+    border-right: 10px solid var(--white);
+    box-sizing: border-box;
+    z-index: 3;
+}
+
 
