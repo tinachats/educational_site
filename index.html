@@ -538,8 +538,8 @@
         <!-- App's Core Indicators -->
         <div class="container">
             <ul class="app-list">
+                <!-- Connect Section -->
                 <li class="app-list-item" id="connect">
-                    <!-- Connect Section -->
                     <section class="my-5">
                         <div class="section-title">
                             <span class="section-icon">
@@ -609,7 +609,7 @@
                                         </div>
                                         <p class="text-muted w-50">Students find connections helpful in their studies</p>
                                     </div>
-                                    <div class="d-block w-50" data-aos="fade-up" data-aos-duration="3000">
+                                    <div class="d-block w-75" data-aos="fade-up" data-aos-duration="3000">
                                         <a role="button" href="register.html" class="btn btn-primary btn-lg btn-icon">
                                             <i class="bi-people fs-2 me-2"></i> Join for Free
                                         </a>
@@ -723,10 +723,11 @@
                             </div>
                         </div>
                     </section>
-                    <!-- /.Connect Section -->
                 </li>
+                <!-- /.Connect Section -->
+
+                <!-- Learning Section -->
                 <li class="app-list-item" id="learn">
-                    <!-- Learning Section -->
                     <section class="my-5">
                         <div class="section-title">
                             <span class="section-icon">
@@ -855,7 +856,7 @@
                                                         <div class="row text-center gx-3">
                                                             <!-- Circle Progress Bar -->
                                                             <div class="col-3">
-                                                                <img src="assets/images/app/circle-progressbar.png" alt="Circle Progress Bar" class="img-fluid" height="60" width="60">
+                                                                <img src="assets/images/app/circle-progress-bar-2.png" alt="Circle Progress Bar" class="img-fluid" height="60" width="60">
                                                             </div>
                                                             <div class="col-9">
                                                                 <div class="d-block text-start">
@@ -935,10 +936,11 @@
                             </div>
                         </div>
                     </section>
-                    <!-- /.Learning Section -->
                 </li>
+                <!-- /.Learning Section -->
+
+                <!-- Collaborate Section -->
                 <li class="app-list-item" id="collaborate">
-                    <!-- Collaborate Section -->
                     <section class="my-5">
                         <div class="section-title">
                             <span class="section-icon">
@@ -968,10 +970,11 @@
                             </div>
                         </div>
                     </section>
-                    <!-- /.Collaborate Section -->
                 </li>
+                <!-- /.Collaborate Section -->
+
+                <!-- Parent Involvement Section -->
                 <li class="app-list-item" id="communicate">
-                    <!-- Parent Involvement Section -->
                     <section class="my-5">
                         <div class="section-title">
                             <span class="section-icon">
@@ -1000,8 +1003,8 @@
                             </div>
                         </div>
                     </section>
-                    <!-- /.Parent Involvement Section -->
                 </li>
+                <!-- /.Parent Involvement Section -->
             </ul>
         </div>
         <!-- /.App's Core Indicators -->
@@ -1328,33 +1331,6 @@
         document.addEventListener('DOMContentLoaded', function() {
             // animate numbers
             animateNumbers();
-
-            // Circle Progress Bar animation
-            let progressBars = document.querySelectorAll('.progress-value');
-            let progressFill = document.querySelector('.progress-fill');
-            
-            progressBars.forEach(progressBar => {
-                const minValue = parseInt(progressBar.getAttribute('aria-valuemin'));
-                const valueNow = parseInt(progressBar.getAttribute('aria-valuenow'));
-                const maxValue = parseInt(progressBar.getAttribute('aria-valuemax'));
-                const circumference = progressFill.getTotalLength();
-                const offset = circumference - (valueNow / 100) * circumference;
-                let stepInterval = 2000 / valueNow;
-                let percentage = 0;
-
-                progressFill.style.strokeDasharray = `${circumference} ${circumference}`;
-                progressFill.style.strokeDashoffset = circumference;
-                
-                setInterval(() => {
-                    if (percentage == valueNow) {
-                        clearInterval();
-                    } else {
-                        percentage += 1 ; 
-                        progressBar.innerHTML = `${percentage}%`;
-                        progressFill.style.strokeDashoffset = offset;
-                    }
-                }, stepInterval);
-            });
 
             // Changing the subject every one and half second
             setInterval(changeCourse, 1500); 
