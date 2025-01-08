@@ -100,6 +100,10 @@ label {
     color: var(--purple-magenta);
 }
 
+.text-soft-gray {
+    color: #cccccc;
+}
+
 .text-orange {
     color: orangered;
 }
