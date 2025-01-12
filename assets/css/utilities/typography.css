@@ -79,6 +79,10 @@ label {
     
 }
 
+.text-soft-primary {
+    color:#9174f9;
+}
+
 .text-primary,
 .text-purple {
     color: var(--app-color) !important;

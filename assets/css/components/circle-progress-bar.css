@@ -1,3 +1,8 @@
+.circle-progress-bar-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
 
 .circle-progress-bar {
     position: relative;
@@ -5,21 +10,21 @@
 
 .circle-progress-bar, 
 .circle-progress-bar>.outer {
-    height: 160px;
-    width: 160px;
+    height: 100px;
+    width: 100px;
     border-radius: 50%;
 }
 
 .circle-progress-bar>.outer {
-    padding: 20px;
+    padding: 9px;
     box-shadow: 6px 6px 10px -1px rgba(0, 0, 0, .15), 
     -6px -6px 10px -1px rgba(255, 255, 255, .7);
 }
 
 .circle-progress-bar>.outer>.inner {
     display: grid;
-    height: 120px;
-    width: 120px;
+    height: 80px;
+    width: 80px;
     border-radius: 50%;
     box-shadow: inset 4px 4px 6px -1px rgba(0, 0, 0, .2), 
     inset -4px -4px 6px -1px rgba(255, 255, 255, .7),
@@ -28,30 +33,18 @@
     0px 12px 10px -10px rgba(0, 0, 0, .05);
 }
 
-.circle-progress-bar>.outer>.inner>span.progress-value {
-    margin: auto;
-    color: var(--app-color);
-    font-weight: 600;
-    font-size: 1.5rem;
-}
-
 .circle-progress-bar>svg {
     position: absolute;
-    left: 0;
-    top: 0;
+    overflow: visible;
+    top: -5%;
+    left: 5%;
     transform: rotate(-90deg);
 }
 
 .progress-track { 
     fill: none; 
-    stroke: #e6e6e6; 
-    stroke-width: 20; 
-} 
-
-.progress-fill { 
-    fill: none; 
     stroke: url(#gradient-color); 
-    stroke-width: 20; 
+    stroke-width: 9; 
     stroke-dasharray: 440; 
     stroke-dashoffset: 440; 
     transition: stroke-dashoffset 2s ease-in-out;

@@ -1,5 +1,5 @@
 @import url('hero-section.css');
-/* @import url('circle-progress-bar.css'); */
+@import url('circle-progress-bar.css');
 
 .app-list {
     list-style: none;
@@ -312,3 +312,39 @@
     z-index: 10;
 }
 
+.svg-wrapper {
+    position:relative;
+    display: flex;
+    justify-content: space-between;
+    align-items: end;
+    box-sizing: border-box;
+}
+
+.svg-wrapper>.assignment-box-wrapper,
+.svg-wrapper>.project-operation-wrapper {
+    height: 100px;
+    bottom: 0;
+}
+
+.svg-wrapper>.assignment-box-wrapper {
+    width: 200px;
+    left: 10%;
+}
+
+.svg-wrapper>.project-operation-wrapper {
+    width: 250px;
+    left: 20%;
+}
+
+.svg-wrapper>.assignment-box-wrapper>svg,
+.svg-wrapper>.project-operation-wrapper>svg {
+    position: absolute;
+    overflow: visible;
+    bottom: 0;
+}
+
+.svg-wrapper>.assignment-box-wrapper>.student-search-result {
+    position: absolute;
+    left: -50%;
+    top: -1.2rem;
+}

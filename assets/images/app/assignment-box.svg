@@ -1,0 +1,22 @@
+<svg viewBox="0 0 370 83" fill="none" xmlns="http://www.w3.org/2000/svg">
+    <g id="assignment-box">
+        <defs>
+            <linearGradient id="data-flow-gradient">
+                <!-- White shows, black hides-->
+                <stop offset="0" stop-color="white" stop-opacity="0"/>
+                <stop offset="0.8" stop-color="white" stop-opacity="1"/>
+                <stop offset="0.8" stop-color="white" stop-opacity="0"/>
+            </linearGradient>
+        
+            <mask id="data-flow-gradient-mask">
+                <rect class="mask-rect" x="0" y="0" height="100%" width="100%" fill="url(#data-flow-gradient)"/>
+            </mask>
+        </defs>
+        <path class="front-wire" d="M11 17C11 17 0.999977 45 63 45C125 45 312 45 336 45C360 45 360 65 360 65" stroke="#754FFE" stroke-width="5" mask="url(#data-flow-gradient-mask)"/>
+        <path class="back-wire" d="M11 17C11 17 0.999977 45 63 45C125 45 312 45 336 45C360 45 360 65 360 65" stroke="#754FFE" stroke-width="5"/>
+        <circle class="back-node" cx="359.5" cy="72.5" r="10.5" fill="#CCCCCC"/>
+        <circle class="front-node" cx="359.5" cy="72.5" r="10.5" fill="#754FFE"/>
+        <circle class="back-node" cx="10.5" cy="10.5" r="10.5" fill="#CCCCCC" fill-opacity="0.8"/>
+        <circle class="front-node" cx="10.5" cy="10.5" r="10.5" fill="#754FFE"/>
+    </g>
+</svg>
