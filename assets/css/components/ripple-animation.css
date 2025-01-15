@@ -37,6 +37,7 @@
 
 .ripples>.inner-ripple {
     position: relative;
+    display: grid;
     height: 200px;
     width: 200px;
     background-color: #835fc0;
@@ -71,7 +72,11 @@
     }
 }
 
-.ripples>.inner-ripple>.focal-point {
+.ripples>.inner-ripple>.center-content {
+    margin: auto;
+}
+
+.ripples>.inner-ripple>.center-content>.focal-point {
     height: 100%;
     width: 100%;
     object-fit: cover;

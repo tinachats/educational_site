@@ -8,7 +8,7 @@
 
 /* Main Nav */
 .navbar.main-nav {
-    height: 60px;
+    height: 50px;
     font-size: var(--text-sm);
     margin-top: 0;
     margin-bottom: 0;
@@ -21,14 +21,13 @@
     display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
     list-style: none;
-    width: 100%;
 }
 
 .navbar.main-nav .nav-list>li.nav-item,
+.navbar.main-nav .nav-list>li.nav-brand,
 .navbar.main-nav .search-form {
-    margin-top: 0.5rem;
+    margin-top: 0
 }
 
 .navbar .navbar-brand{
@@ -64,12 +63,22 @@
     color: var(--text-light-gray);
 }
 
-.navbar.main-nav .search-form>i.search-icon {
+.navbar.main-nav .search-form>.search-icon-wrapper {
     position: absolute;
+    display: grid;
+    height: 1.5rem;
+    width: 1.5rem;
+    border-radius: 50%;
+    background-color: var(--app-color);
     top: 50%;
+    right: 1%;
     transform: translateY(-50%);
-    right: 5%;
-    font-size: 1rem;
+}
+
+.navbar.main-nav .search-form>.search-icon-wrapper>i.search-icon {
+    color: #fff;
+    margin: auto;
+    font-size: .85rem;
 }
 
 .navbar.main-nav .nav-badge-item {

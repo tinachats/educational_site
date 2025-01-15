@@ -26,10 +26,9 @@
 }
 
 .dropdown-menu .dropdown-item:hover {
-    background: var(--linear-gradient);
-    box-shadow: var(--purple-shadow);
-    transition: 0.3s ease-in-out;
-    color: #fff;
+    background-color: var(--light-app-color);
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.3s ease-in-out;
 }
 
 .dropdown-item.active, 
@@ -38,7 +37,7 @@
     text-decoration: none;
     background-color: #37465b;
     border-radius: 5px;
-    color: var(--app-color);
+    color: var(--black);
 }
 
 

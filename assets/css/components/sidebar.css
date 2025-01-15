@@ -5,7 +5,7 @@
 .sidebar-menu>.offcanvas-header {
     position: relative;
     box-sizing: border-box;
-    height: 60px;
+    height: 50px;
 }
 
 .sidebar-menu>.offcanvas-body>.list {
@@ -33,19 +33,19 @@
 }
 
 .sidebar-menu>.offcanvas-body>.list>.list-item:not(.clear):hover {
-    background: var(--linear-gradient);
-    box-shadow: var(--purple-shadow);
-    transition: 0.3s ease-in-out;
+    background-color: var(--light-app-color);
+    box-shadow: var(--shadow-sm);
+    transition: background-color 0.3s ease-in-out;
 }
 
 .sidebar-menu>.offcanvas-body>.list>.list-item:not(.clear):hover>a,
 .sidebar-menu>.offcanvas-body>.list>.list-item:not(.clear):hover label {
-    color: #fff;
+    color: var(--black);
 } 
 
 .sidebar-menu>.offcanvas-body>.list>.list-item>span.badge{
     background: var(--linear-gradient);
-    color: #fff;
+    color: var(--black);
 }
 
 .sidebar-menu>.offcanvas-body>.list>.list-item:hover>span.badge{
